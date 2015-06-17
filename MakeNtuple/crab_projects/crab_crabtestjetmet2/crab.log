@@ -1,0 +1,884 @@
+DEBUG 2015-04-15 11:26:40,134: 	 Executing command: 'submit'
+DEBUG 2015-04-15 11:26:40,135: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:26:40,144: 	 Checking credentials
+DEBUG 2015-04-15 11:26:40,145: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:26:40,145: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:26:40,654: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 41286
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:26:41,258: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 41285
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:26:41,258: 	 Proxy valid for 11:28:06 hours
+INFO 2015-04-15 11:26:41,258: 	 Will use configuration file crabtest.py.
+DEBUG 2015-04-15 11:26:41,258: 	 Loading configuration
+DEBUG 2015-04-15 11:26:41,262: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2015-04-15 11:26:41,377: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:26:41,377: 	 Checking credentials
+DEBUG 2015-04-15 11:26:41,378: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:26:41,378: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:26:41,883: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 41285
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:26:42,395: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 41284
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:26:42,396: 	 Proxy valid for 11:28:05 hours
+DEBUG 2015-04-15 11:26:42,902: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:26:43,267: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 11:26:43,380: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:26:43,380: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 11:26:43,380: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 11:26:43,584: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 719:33:05  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:26:43,586: 	 Myproxy is valid: 2590385
+DEBUG 2015-04-15 11:26:43,586: 	 Command use: submit
+DEBUG 2015-04-15 11:26:43,586: 	 Options use: ['-c', 'crabtest.py']
+DEBUG 2015-04-15 11:26:43,957: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 11:26:43,957: 	 Instance is prod
+DEBUG 2015-04-15 11:26:43,957: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 11:26:43,957: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 11:26:43,957: 	 Started submission
+DEBUG 2015-04-15 11:26:43,957: 	 Working on /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet2
+DEBUG 2015-04-15 11:26:44,431: 	 Found CMSSW_7_3_0_pre1 for slc6_amd64_gcc491 with base /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1
+DEBUG 2015-04-15 11:26:44,474: 	 UNIQUE NAME: tarUUID 281ae5c1-0add-4139-96c6-db95e1f9c282 
+DEBUG 2015-04-15 11:26:44,474: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.General.workArea = 'crab_projects'
+config.General.requestName = 'crabtestjetmet2'
+config.section_('JobType')
+config.JobType.psetName = 'makentuple_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.outputFiles = ['ntuple.root']
+config.section_('Data')
+config.Data.inputDataset = '/DYJetsToLL_M-50_13TeV-madgraph-pythia8/Phys14DR-PU4bx50_PHYS14_25_V1-v1/MINIAODSIM'
+config.Data.outLFN = '/store/user/shtan/testcrab3/'
+config.Data.publication = False
+config.Data.unitsPerJob = 10
+config.Data.inputDBS = 'global'
+config.Data.splitting = 'FileBased'
+config.section_('Site')
+config.Site.storageSite = 'T2_CH_CERN'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2015-04-15 11:26:44,474: 	 self.config.JobType.psetName: makentuple_cfg.py
+DEBUG 2015-04-15 11:26:44,474: 	 Importing CMSSW config makentuple_cfg.py
+DEBUG 2015-04-15 11:26:44,565: 	 The following EDM output files will be collected: []
+DEBUG 2015-04-15 11:26:44,565: 	 The following TFile output files will be collected: []
+DEBUG 2015-04-15 11:26:44,565: 	 The following user output files will be collected: ['ntuple.root']
+DEBUG 2015-04-15 11:26:44,565: 	 Writing CMSSW config to /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet2/inputs/CMSSW_cfg.py
+DEBUG 2015-04-15 11:26:44,578: 	 Found CMSSW_7_3_0_pre1 for slc6_amd64_gcc491 with base /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1
+DEBUG 2015-04-15 11:26:44,578: 	 Making tarball in /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet2/inputs/281ae5c1-0add-4139-96c6-db95e1f9c282default.tgz
+DEBUG 2015-04-15 11:26:44,580: 	  checking directory /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/lib
+DEBUG 2015-04-15 11:26:44,580: 	  adding directory /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/lib to tarball
+DEBUG 2015-04-15 11:26:44,642: 	  checking directory /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/module
+DEBUG 2015-04-15 11:26:44,690: 	 tgz contents: [('lib', 0, 1429014627, 'shtan'), ('lib/slc6_amd64_gcc491', 0, 1429016003, 'shtan'), ('lib/slc6_amd64_gcc491/pluginMETSigTuningMakeNtuple.so', 284648, 1429016002, 'shtan'), ('lib/slc6_amd64_gcc491/.edmplugincache', 154, 1429016003, 'shtan'), ('lib/slc6_amd64_gcc491/METSigTuningMakeNtuple.edmplugin', 39, 1429016002, 'shtan'), ('PSet.py', 101, 1429090004, 'shtan'), ('PSet.pkl', 9181, 1429090004, 'shtan'), ('debug/originalPSet.py', 2673, 1429016426, 'shtan'), ('debug/crabConfig.py', 775, 1429090004, 'shtan')]
+DEBUG 2015-04-15 11:26:44,691: 	 MD5 checksum: 733682dd52877d279c8531cff2322de4
+DEBUG 2015-04-15 11:26:44,694: 	  uploading archive to cache /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet2/inputs/281ae5c1-0add-4139-96c6-db95e1f9c282default.tgz 
+DEBUG 2015-04-15 11:26:45,080: 	 Result uploading input files: ('b63052deae3d00c893485723b12e3b7c1ed565721a847a9054becb749267cafa.tar.gz', '733682dd52877d279c8531cff2322de4') 
+INFO 2015-04-15 11:26:45,080: 	 Sending the request to the server
+DEBUG 2015-04-15 11:26:45,081: 	 Submitting {'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_CH_CERN', 'algoargs': 10, 'cachefilename': 'b63052deae3d00c893485723b12e3b7c1ed565721a847a9054becb749267cafa.tar.gz', 'addoutputfiles': ['ntuple.root'], 'generator': 'pythia', 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'jobsw': 'CMSSW_7_3_0_pre1', 'edmoutfiles': [], 'cacheurl': 'https://cmsweb.cern.ch/crabcache', 'inputdata': '/DYJetsToLL_M-50_13TeV-madgraph-pythia8/Phys14DR-PU4bx50_PHYS14_25_V1-v1/MINIAODSIM', 'lfn': '/store/user/shtan/testcrab3/', 'dryrun': 0, 'workflow': 'crab_crabtestjetmet2', 'adduserfiles': [], 'publishname': '733682dd52877d279c8531cff2322de4', 'nonprodsw': 0, 'tfileoutfiles': [], 'oneEventMode': 0, 'saveoutput': 1, 'publication': 0, 'jobarch': 'slc6_amd64_gcc491', 'totalunits': 0, 'splitalgo': 'FileBased', 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'jobtype': 'Analysis'} 
+DEBUG 2015-04-15 11:26:45,081: 	 Encoded submit request: ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_CH_CERN&algoargs=10&cachefilename=b63052deae3d00c893485723b12e3b7c1ed565721a847a9054becb749267cafa.tar.gz&generator=pythia&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&jobsw=CMSSW_7_3_0_pre1&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&inputdata=%2FDYJetsToLL_M-50_13TeV-madgraph-pythia8%2FPhys14DR-PU4bx50_PHYS14_25_V1-v1%2FMINIAODSIM&lfn=%2Fstore%2Fuser%2Fshtan%2Ftestcrab3%2F&dryrun=0&workflow=crab_crabtestjetmet2&publishname=733682dd52877d279c8531cff2322de4&nonprodsw=0&oneEventMode=0&saveoutput=1&publication=0&jobarch=slc6_amd64_gcc491&totalunits=0&splitalgo=FileBased&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&jobtype=Analysis&addoutputfiles=ntuple.root
+DEBUG 2015-04-15 11:27:08,187: 	 Result: {'result': [{'RequestName': '150415_092645:shtan_crab_crabtestjetmet2'}]}
+INFO 2015-04-15 11:27:08,189: 	 Success: Your task has been delivered to the CRAB3 server.
+INFO 2015-04-15 11:27:08,189: 	 Task name: 150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 11:27:08,189: 	 Please use 'crab status' to check how the submission process proceeds
+DEBUG 2015-04-15 11:27:08,190: 	 About to return
+DEBUG 2015-04-15 11:48:31,193: 	 Executing command: 'status'
+DEBUG 2015-04-15 11:48:31,193: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:48:31,304: 	 Checking credentials
+DEBUG 2015-04-15 11:48:31,306: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:48:31,306: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:48:32,015: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39975
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:48:32,734: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39974
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:48:32,734: 	 Proxy valid for 11:06:15 hours
+DEBUG 2015-04-15 11:48:32,863: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:48:32,863: 	 Checking credentials
+DEBUG 2015-04-15 11:48:32,864: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:48:32,864: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:48:33,371: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39973
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:48:34,178: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39972
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:48:34,178: 	 Proxy valid for 11:06:13 hours
+DEBUG 2015-04-15 11:48:34,785: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:48:35,289: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 11:48:35,444: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:48:35,444: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 11:48:35,444: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 11:48:36,941: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 719:11:12  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:48:36,942: 	 Myproxy is valid: 2589072
+DEBUG 2015-04-15 11:48:36,942: 	 Command use: status
+DEBUG 2015-04-15 11:48:36,942: 	 Options use: []
+DEBUG 2015-04-15 11:48:37,869: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 11:48:37,869: 	 Instance is prod
+DEBUG 2015-04-15 11:48:37,869: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 11:48:37,869: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 11:48:37,869: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 11:49:01,353: 	 {'status': 'SUBMITTED', 'saveLogs': 'F', 'jobsPerStatus': {'running': 6}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'running'}, '2': {'State': 'running'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'pool': {}, 'totalJobdefs': 0, 'jobSetID': '150415_092645:shtan_crab_crabtestjetmet2', 'jobdefErrors': [], 'outdatasets': None, 'jobList': [['running', 1], ['running', 3], ['running', 2], ['running', 5], ['running', 4], ['running', 6]]}
+INFO 2015-04-15 11:49:01,353: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 11:49:01,353: 	 Task status:			SUBMITTED
+INFO 2015-04-15 11:49:01,353: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 11:49:01,353: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 11:49:01,353: 	 Details:			running       100.0% (6/6)
+INFO 2015-04-15 11:49:01,354: 	 
+No publication information (publication has been disabled in the crab configuration file)
+DEBUG 2015-04-15 11:56:07,577: 	 Executing command: 'status'
+DEBUG 2015-04-15 11:56:07,577: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:56:07,601: 	 Checking credentials
+DEBUG 2015-04-15 11:56:07,603: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:56:07,603: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:56:08,109: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39518
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:56:08,822: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39518
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:56:08,822: 	 Proxy valid for 10:58:38 hours
+DEBUG 2015-04-15 11:56:08,943: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:56:08,944: 	 Checking credentials
+DEBUG 2015-04-15 11:56:08,944: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:56:08,944: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:56:09,450: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39517
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:56:09,955: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39517
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:56:09,956: 	 Proxy valid for 10:58:37 hours
+DEBUG 2015-04-15 11:56:10,461: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:56:10,848: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 11:56:10,957: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:56:10,957: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 11:56:10,958: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 11:56:11,163: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 719:03:37  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:56:11,164: 	 Myproxy is valid: 2588617
+DEBUG 2015-04-15 11:56:11,164: 	 Command use: status
+DEBUG 2015-04-15 11:56:11,164: 	 Options use: ['-d', 'crab_projects/crab_crabtestjetmet2']
+DEBUG 2015-04-15 11:56:11,548: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 11:56:11,548: 	 Instance is prod
+DEBUG 2015-04-15 11:56:11,548: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 11:56:11,548: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 11:56:11,548: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 11:56:28,799: 	 {'status': 'SUBMITTED', 'saveLogs': 'F', 'jobsPerStatus': {'running': 6}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'running'}, '2': {'State': 'running'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'pool': {}, 'totalJobdefs': 0, 'jobSetID': '150415_092645:shtan_crab_crabtestjetmet2', 'jobdefErrors': [], 'outdatasets': None, 'jobList': [['running', 1], ['running', 3], ['running', 2], ['running', 5], ['running', 4], ['running', 6]]}
+INFO 2015-04-15 11:56:28,799: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 11:56:28,799: 	 Task status:			SUBMITTED
+INFO 2015-04-15 11:56:28,799: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 11:56:28,799: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 11:56:28,800: 	 Details:			running       100.0% (6/6)
+INFO 2015-04-15 11:56:28,800: 	 
+No publication information (publication has been disabled in the crab configuration file)
+DEBUG 2015-04-15 12:02:52,248: 	 Executing command: 'status'
+DEBUG 2015-04-15 12:02:52,249: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 12:02:52,511: 	 Checking credentials
+DEBUG 2015-04-15 12:02:52,514: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 12:02:52,514: 	 Getting proxy life time left
+DEBUG 2015-04-15 12:02:54,898: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39112
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:02:56,025: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39111
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:02:56,025: 	 Proxy valid for 10:51:52 hours
+DEBUG 2015-04-15 12:02:56,179: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 12:02:56,179: 	 Checking credentials
+DEBUG 2015-04-15 12:02:56,180: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 12:02:56,180: 	 Getting proxy life time left
+DEBUG 2015-04-15 12:02:56,687: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39110
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:02:57,196: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39109
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:02:57,197: 	 Proxy valid for 10:51:50 hours
+DEBUG 2015-04-15 12:02:57,704: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:02:58,201: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 12:02:58,314: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 12:02:58,314: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 12:02:58,314: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 12:02:58,820: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 718:56:50  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:02:58,821: 	 Myproxy is valid: 2588210
+DEBUG 2015-04-15 12:02:58,821: 	 Command use: status
+DEBUG 2015-04-15 12:02:58,821: 	 Options use: ['-d', 'crab_projects/crab_crabtestjetmet2']
+DEBUG 2015-04-15 12:02:59,267: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 12:02:59,267: 	 Instance is prod
+DEBUG 2015-04-15 12:02:59,267: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 12:02:59,267: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 12:02:59,267: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 12:03:58,626: 	 {'status': 'SUBMITTED', 'saveLogs': 'F', 'jobsPerStatus': {'running': 6}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'running'}, '2': {'State': 'running'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'pool': {}, 'totalJobdefs': 0, 'jobSetID': '150415_092645:shtan_crab_crabtestjetmet2', 'jobdefErrors': [], 'outdatasets': None, 'jobList': [['running', 1], ['running', 3], ['running', 2], ['running', 5], ['running', 4], ['running', 6]]}
+INFO 2015-04-15 12:03:58,626: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:03:58,626: 	 Task status:			SUBMITTED
+INFO 2015-04-15 12:03:58,626: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:03:58,626: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:03:58,627: 	 Details:			running       100.0% (6/6)
+INFO 2015-04-15 12:03:58,627: 	 
+No publication information (publication has been disabled in the crab configuration file)
+DEBUG 2015-04-15 12:10:30,863: 	 Executing command: 'status'
+DEBUG 2015-04-15 12:10:30,864: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 12:10:30,874: 	 Checking credentials
+DEBUG 2015-04-15 12:10:30,875: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 12:10:30,875: 	 Getting proxy life time left
+DEBUG 2015-04-15 12:10:31,379: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 38655
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:10:31,886: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 38655
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:10:31,886: 	 Proxy valid for 10:44:15 hours
+DEBUG 2015-04-15 12:10:31,999: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 12:10:31,999: 	 Checking credentials
+DEBUG 2015-04-15 12:10:31,999: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 12:10:31,999: 	 Getting proxy life time left
+DEBUG 2015-04-15 12:10:32,503: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 38654
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:10:32,914: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 38654
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:10:32,914: 	 Proxy valid for 10:44:14 hours
+DEBUG 2015-04-15 12:10:33,519: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:10:33,898: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 12:10:34,007: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 12:10:34,007: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 12:10:34,007: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 12:10:34,412: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 718:49:14  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:10:34,413: 	 Myproxy is valid: 2587754
+DEBUG 2015-04-15 12:10:34,413: 	 Command use: status
+DEBUG 2015-04-15 12:10:34,414: 	 Options use: ['-d', 'crab_projects/crab_crabtestjetmet2']
+DEBUG 2015-04-15 12:10:34,866: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 12:10:34,866: 	 Instance is prod
+DEBUG 2015-04-15 12:10:34,866: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 12:10:34,866: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 12:10:34,866: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 12:10:51,204: 	 {'status': 'SUBMITTED', 'saveLogs': 'F', 'jobsPerStatus': {'running': 6}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'running'}, '2': {'State': 'running'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'pool': {}, 'totalJobdefs': 0, 'jobSetID': '150415_092645:shtan_crab_crabtestjetmet2', 'jobdefErrors': [], 'outdatasets': None, 'jobList': [['running', 1], ['running', 3], ['running', 2], ['running', 5], ['running', 4], ['running', 6]]}
+INFO 2015-04-15 12:10:51,204: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:10:51,204: 	 Task status:			SUBMITTED
+INFO 2015-04-15 12:10:51,204: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:10:51,204: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:10:51,204: 	 Details:			running       100.0% (6/6)
+INFO 2015-04-15 12:10:51,205: 	 
+No publication information (publication has been disabled in the crab configuration file)
+DEBUG 2015-04-15 12:11:24,649: 	 Executing command: 'status'
+DEBUG 2015-04-15 12:11:24,649: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 12:11:24,656: 	 Checking credentials
+DEBUG 2015-04-15 12:11:24,657: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 12:11:24,657: 	 Getting proxy life time left
+DEBUG 2015-04-15 12:11:25,162: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 38601
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:11:25,567: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 38601
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:11:25,567: 	 Proxy valid for 10:43:21 hours
+DEBUG 2015-04-15 12:11:25,677: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 12:11:25,677: 	 Checking credentials
+DEBUG 2015-04-15 12:11:25,678: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 12:11:25,678: 	 Getting proxy life time left
+DEBUG 2015-04-15 12:11:26,083: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 38600
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:11:26,488: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 38600
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:11:26,488: 	 Proxy valid for 10:43:20 hours
+DEBUG 2015-04-15 12:11:26,891: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:11:27,324: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 12:11:27,432: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 12:11:27,432: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 12:11:27,432: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 12:11:28,137: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 718:48:20  (30.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 12:11:28,138: 	 Myproxy is valid: 2587700
+DEBUG 2015-04-15 12:11:28,138: 	 Command use: status
+DEBUG 2015-04-15 12:11:28,138: 	 Options use: []
+DEBUG 2015-04-15 12:11:28,550: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 12:11:28,550: 	 Instance is prod
+DEBUG 2015-04-15 12:11:28,551: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 12:11:28,551: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 12:11:28,551: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 12:11:45,359: 	 {'status': 'SUBMITTED', 'saveLogs': 'F', 'jobsPerStatus': {'running': 6}, 'jobs': {'1': {'State': 'running'}, '3': {'State': 'running'}, '2': {'State': 'running'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'pool': {}, 'totalJobdefs': 0, 'jobSetID': '150415_092645:shtan_crab_crabtestjetmet2', 'jobdefErrors': [], 'outdatasets': None, 'jobList': [['running', 1], ['running', 3], ['running', 2], ['running', 5], ['running', 4], ['running', 6]]}
+INFO 2015-04-15 12:11:45,359: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:11:45,359: 	 Task status:			SUBMITTED
+INFO 2015-04-15 12:11:45,359: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:11:45,359: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 12:11:45,359: 	 Details:			running       100.0% (6/6)
+INFO 2015-04-15 12:11:45,359: 	 
+No publication information (publication has been disabled in the crab configuration file)
+DEBUG 2015-04-15 13:20:27,305: 	 Executing command: 'status'
+DEBUG 2015-04-15 13:20:27,305: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 13:20:27,312: 	 Checking credentials
+DEBUG 2015-04-15 13:20:27,313: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 13:20:27,313: 	 Getting proxy life time left
+DEBUG 2015-04-15 13:20:27,816: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 34459
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 13:20:28,222: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 34458
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 13:20:28,222: 	 Proxy valid for 09:34:19 hours
+DEBUG 2015-04-15 13:20:28,336: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 13:20:28,336: 	 Checking credentials
+DEBUG 2015-04-15 13:20:28,336: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 13:20:28,336: 	 Getting proxy life time left
+DEBUG 2015-04-15 13:20:28,843: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 34458
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 13:20:29,349: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 34457
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 13:20:29,350: 	 Proxy valid for 09:34:18 hours
+DEBUG 2015-04-15 13:20:29,857: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 13:20:30,256: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 13:20:30,366: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 13:20:30,366: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 13:20:30,366: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 13:20:30,571: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 717:39:18  (29.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 13:20:30,572: 	 Myproxy is valid: 2583558
+DEBUG 2015-04-15 13:20:30,572: 	 Command use: status
+DEBUG 2015-04-15 13:20:30,572: 	 Options use: ['-d', 'crab_projects/crab_crabtestjetmet2']
+DEBUG 2015-04-15 13:20:30,939: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 13:20:30,939: 	 Instance is prod
+DEBUG 2015-04-15 13:20:30,939: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 13:20:30,939: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 13:20:30,939: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 13:20:47,782: 	 {'status': 'SUBMITTED', 'saveLogs': 'F', 'jobsPerStatus': {'idle': 2, 'transferring': 2, 'running': 2}, 'jobs': {'1': {'State': 'transferring'}, '3': {'State': 'idle'}, '2': {'State': 'transferring'}, '5': {'State': 'running'}, '4': {'State': 'idle'}, '6': {'State': 'running'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'pool': {}, 'totalJobdefs': 0, 'jobSetID': '150415_092645:shtan_crab_crabtestjetmet2', 'jobdefErrors': [], 'outdatasets': None, 'jobList': [['transferring', 1], ['idle', 3], ['transferring', 2], ['running', 5], ['idle', 4], ['running', 6]]}
+INFO 2015-04-15 13:20:47,782: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 13:20:47,782: 	 Task status:			SUBMITTED
+INFO 2015-04-15 13:20:47,782: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 13:20:47,783: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 13:20:47,783: 	 Details:			idle           33.3% (2/6)
+INFO 2015-04-15 13:20:47,784: 	 				running        33.3% (2/6)
+INFO 2015-04-15 13:20:47,784: 	 				transferring   33.3% (2/6)
+INFO 2015-04-15 13:20:47,784: 	 
+No publication information (publication has been disabled in the crab configuration file)
+DEBUG 2015-04-15 14:03:48,729: 	 Executing command: 'status'
+DEBUG 2015-04-15 14:03:48,731: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 14:03:48,770: 	 Checking credentials
+DEBUG 2015-04-15 14:03:48,771: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 14:03:48,771: 	 Getting proxy life time left
+DEBUG 2015-04-15 14:03:49,378: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 31857
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:03:49,882: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 31857
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:03:49,882: 	 Proxy valid for 08:50:57 hours
+DEBUG 2015-04-15 14:03:49,998: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 14:03:49,999: 	 Checking credentials
+DEBUG 2015-04-15 14:03:49,999: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 14:03:49,999: 	 Getting proxy life time left
+DEBUG 2015-04-15 14:03:50,506: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 31856
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:03:51,112: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 31855
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:03:51,112: 	 Proxy valid for 08:50:56 hours
+DEBUG 2015-04-15 14:03:51,619: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:03:52,008: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 14:03:52,116: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 14:03:52,116: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 14:03:52,117: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 14:03:52,621: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 716:55:56  (29.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:03:52,622: 	 Myproxy is valid: 2580956
+DEBUG 2015-04-15 14:03:52,622: 	 Command use: status
+DEBUG 2015-04-15 14:03:52,622: 	 Options use: ['-d', 'crab_projects/crab_crabtestjetmet2']
+DEBUG 2015-04-15 14:03:53,044: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 14:03:53,044: 	 Instance is prod
+DEBUG 2015-04-15 14:03:53,044: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 14:03:53,044: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 14:03:53,044: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 14:04:21,194: 	 {'status': 'SUBMITTED', 'saveLogs': 'F', 'jobsPerStatus': {'running': 3, 'transferring': 3}, 'jobs': {'1': {'State': 'transferring'}, '3': {'State': 'running'}, '2': {'State': 'transferring'}, '5': {'State': 'running'}, '4': {'State': 'running'}, '6': {'State': 'transferring'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'pool': {}, 'totalJobdefs': 0, 'jobSetID': '150415_092645:shtan_crab_crabtestjetmet2', 'jobdefErrors': [], 'outdatasets': None, 'jobList': [['transferring', 1], ['running', 3], ['transferring', 2], ['running', 5], ['running', 4], ['transferring', 6]]}
+INFO 2015-04-15 14:04:21,194: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 14:04:21,194: 	 Task status:			SUBMITTED
+INFO 2015-04-15 14:04:21,194: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 14:04:21,194: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 14:04:21,194: 	 Details:			running        50.0% (3/6)
+INFO 2015-04-15 14:04:21,195: 	 				transferring   50.0% (3/6)
+INFO 2015-04-15 14:04:21,195: 	 
+No publication information (publication has been disabled in the crab configuration file)
+DEBUG 2015-04-15 14:15:30,613: 	 Executing command: 'status'
+DEBUG 2015-04-15 14:15:30,615: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 14:15:30,641: 	 Checking credentials
+DEBUG 2015-04-15 14:15:30,641: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 14:15:30,641: 	 Getting proxy life time left
+DEBUG 2015-04-15 14:15:31,245: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 31155
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:15:31,749: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 31155
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:15:31,749: 	 Proxy valid for 08:39:15 hours
+DEBUG 2015-04-15 14:15:31,862: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 14:15:31,863: 	 Checking credentials
+DEBUG 2015-04-15 14:15:31,863: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 14:15:31,863: 	 Getting proxy life time left
+DEBUG 2015-04-15 14:15:32,366: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 31154
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:15:32,872: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 31154
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:15:32,872: 	 Proxy valid for 08:39:14 hours
+DEBUG 2015-04-15 14:15:33,377: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:15:33,796: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 14:15:33,906: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 14:15:33,906: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 14:15:33,906: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 14:15:34,311: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 716:44:14  (29.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:15:34,312: 	 Myproxy is valid: 2580254
+DEBUG 2015-04-15 14:15:34,312: 	 Command use: status
+DEBUG 2015-04-15 14:15:34,313: 	 Options use: ['-d', 'crab_projects/crab_crabtestjetmet2']
+DEBUG 2015-04-15 14:15:34,745: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 14:15:34,745: 	 Instance is prod
+DEBUG 2015-04-15 14:15:34,745: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 14:15:34,745: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 14:15:34,745: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 14:16:17,579: 	 {'status': 'UNKNOWN', 'saveLogs': 'F', 'totalJobdefs': 0, 'jobSetID': '', 'jobsPerStatus': {}, 'taskWarningMsg': [], 'taskFailureMsg': '150415_092645:shtan_crab_crabtestjetmet2: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed).If your task is a recent one, this could mean there is a temporary glicth. Please, retry later. Message from the scheduler: Timeout when waiting for remote host', 'failedJobdefs': 0, 'jobdefErrors': [], 'jobList': []}
+INFO 2015-04-15 14:16:17,579: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 14:16:17,580: 	 Task status:			UNKNOWN
+ERROR 2015-04-15 14:16:17,580: 	 Error during task information retrieval:	150415_092645:shtan_crab_crabtestjetmet2: The CRAB3 server frontend is not able to find your task in the Grid scheduler (remember tasks older than 30 days are automatically removed).If your task is a recent one, this could mean there is a temporary glicth. Please, retry later. Message from the scheduler: Timeout when waiting for remote host.
+INFO 2015-04-15 14:16:17,580: 	 
+No jobs created yet!
+DEBUG 2015-04-15 14:18:34,274: 	 Executing command: 'status'
+DEBUG 2015-04-15 14:18:34,274: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 14:18:34,285: 	 Checking credentials
+DEBUG 2015-04-15 14:18:34,286: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 14:18:34,286: 	 Getting proxy life time left
+DEBUG 2015-04-15 14:18:35,098: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 30971
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:18:35,707: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 30971
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:18:35,707: 	 Proxy valid for 08:36:11 hours
+DEBUG 2015-04-15 14:18:35,821: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 14:18:35,821: 	 Checking credentials
+DEBUG 2015-04-15 14:18:35,821: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 14:18:35,821: 	 Getting proxy life time left
+DEBUG 2015-04-15 14:18:36,335: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 30970
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:18:36,946: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 30970
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:18:36,946: 	 Proxy valid for 08:36:10 hours
+DEBUG 2015-04-15 14:18:37,555: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:18:37,923: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+DEBUG 2015-04-15 14:18:38,038: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 14:18:38,038: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2015-04-15 14:18:38,038: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan_cmsweb.cern.ch for credential name
+DEBUG 2015-04-15 14:18:38,443: 	 Executing : 
+ command : myproxy-info -l f242ff3ca2298686aac6b0d86e05ce4dc019b5d1 -s myproxy.cern.ch
+ output : username: f242ff3ca2298686aac6b0d86e05ce4dc019b5d1
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms(3[136]|21|045|052|021|031).cern.ch
+  timeleft: 716:41:10  (29.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 14:18:38,445: 	 Myproxy is valid: 2580070
+DEBUG 2015-04-15 14:18:38,445: 	 Command use: status
+DEBUG 2015-04-15 14:18:38,445: 	 Options use: ['-d', 'crab_projects/crab_crabtestjetmet2']
+DEBUG 2015-04-15 14:18:38,832: 	 CRABClient version: 3.3.15 Compatible
+DEBUG 2015-04-15 14:18:38,832: 	 Instance is prod
+DEBUG 2015-04-15 14:18:38,832: 	 Server base url is cmsweb.cern.ch
+DEBUG 2015-04-15 14:18:38,832: 	 Command url /crabserver/prod/workflow
+DEBUG 2015-04-15 14:18:38,832: 	 Looking up detailed status of task 150415_092645:shtan_crab_crabtestjetmet2
+DEBUG 2015-04-15 14:19:24,243: 	 {'status': 'SUBMITTED', 'saveLogs': 'F', 'jobsPerStatus': {'running': 2, 'transferring': 4}, 'jobs': {'1': {'State': 'transferring'}, '3': {'State': 'running'}, '2': {'State': 'transferring'}, '5': {'State': 'transferring'}, '4': {'State': 'running'}, '6': {'State': 'transferring'}}, 'publication': {'disabled': []}, 'taskWarningMsg': [], 'taskFailureMsg': '', 'failedJobdefs': 0, 'ASOURL': 'https://cmsweb.cern.ch/couchdb', 'pool': {}, 'totalJobdefs': 0, 'jobSetID': '150415_092645:shtan_crab_crabtestjetmet2', 'jobdefErrors': [], 'outdatasets': None, 'jobList': [['transferring', 1], ['running', 3], ['transferring', 2], ['transferring', 5], ['running', 4], ['transferring', 6]]}
+INFO 2015-04-15 14:19:24,243: 	 Task name:			150415_092645:shtan_crab_crabtestjetmet2
+INFO 2015-04-15 14:19:24,243: 	 Task status:			SUBMITTED
+INFO 2015-04-15 14:19:24,243: 	 Glidemon monitoring URL:	http://glidemon.web.cern.ch/glidemon/jobs.php?taskname=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 14:19:24,243: 	 Dashboard monitoring URL:	http://dashb-cms-job.cern.ch/dashboard/templates/task-analysis/#user=crab&refresh=0&table=Jobs&p=1&records=25&activemenu=2&status=&site=&tid=150415_092645%3Ashtan_crab_crabtestjetmet2
+INFO 2015-04-15 14:19:24,244: 	 Details:			running        33.3% (2/6)
+INFO 2015-04-15 14:19:24,244: 	 				transferring   66.7% (4/6)
+INFO 2015-04-15 14:19:24,244: 	 
+No publication information (publication has been disabled in the crab configuration file)

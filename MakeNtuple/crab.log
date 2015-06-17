@@ -1,0 +1,1705 @@
+DEBUG 2015-04-14 14:35:04,425: 	 Executing command: 'submit'
+DEBUG 2015-04-14 14:35:04,425: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-14 14:35:04,438: 	 Checking credentials
+DEBUG 2015-04-14 14:35:04,438: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-14 14:35:04,438: 	 Getting proxy life time left
+DEBUG 2015-04-14 14:35:05,244: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 41824
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 14:35:05,749: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 41824
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 14:35:05,749: 	 Proxy valid for 11:37:04 hours
+INFO 2015-04-14 14:35:05,749: 	 Will use configuration file makentuple_cfg.py.
+DEBUG 2015-04-14 14:35:05,749: 	 Loading configuration
+ERROR 2015-04-14 14:35:06,209: 	 Configuration syntax error:
+No module named METSigTuning.MakeNtuple.makentuple_cfi
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+ERROR 2015-04-14 14:35:06,209: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 82, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Configuration syntax error:
+No module named METSigTuning.MakeNtuple.makentuple_cfi
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+DEBUG 2015-04-14 14:37:06,784: 	 Executing command: 'submit'
+DEBUG 2015-04-14 14:37:06,785: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-14 14:37:06,800: 	 Checking credentials
+DEBUG 2015-04-14 14:37:06,800: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-14 14:37:06,800: 	 Getting proxy life time left
+DEBUG 2015-04-14 14:37:07,421: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 41702
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 14:37:08,061: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 41702
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 14:37:08,061: 	 Proxy valid for 11:35:02 hours
+INFO 2015-04-14 14:37:08,061: 	 Will use configuration file makentuple_cfg.py.
+DEBUG 2015-04-14 14:37:08,061: 	 Loading configuration
+ERROR 2015-04-14 14:37:08,183: 	 Configuration syntax error:
+No module named METSigTuning.MakeNtuple.python.makentuple_cfi
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+ERROR 2015-04-14 14:37:08,183: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 82, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Configuration syntax error:
+No module named METSigTuning.MakeNtuple.python.makentuple_cfi
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+DEBUG 2015-04-14 15:02:20,121: 	 Executing command: 'submit'
+DEBUG 2015-04-14 15:02:20,124: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-14 15:02:20,136: 	 Checking credentials
+DEBUG 2015-04-14 15:02:20,137: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-14 15:02:20,137: 	 Getting proxy life time left
+DEBUG 2015-04-14 15:02:20,852: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40189
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 15:02:21,371: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40188
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 15:02:21,371: 	 Proxy valid for 11:09:49 hours
+INFO 2015-04-14 15:02:21,371: 	 Will use configuration file makentuple_cfg.py.
+DEBUG 2015-04-14 15:02:21,371: 	 Loading configuration
+ERROR 2015-04-14 15:02:21,494: 	 Configuration syntax error:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/makentuple_cfg.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+ERROR 2015-04-14 15:02:21,495: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 82, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Configuration syntax error:
+Unable to find a Configuration object instance in file:
+/afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/makentuple_cfg.py
+
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+DEBUG 2015-04-14 15:05:06,987: 	 Executing command: 'submit'
+DEBUG 2015-04-14 15:05:06,987: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-14 15:05:06,996: 	 Checking credentials
+DEBUG 2015-04-14 15:05:06,997: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-14 15:05:06,997: 	 Getting proxy life time left
+DEBUG 2015-04-14 15:05:07,705: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40022
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 15:05:08,325: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40021
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 15:05:08,326: 	 Proxy valid for 11:07:02 hours
+INFO 2015-04-14 15:05:08,326: 	 Will use configuration file crab.cfg.
+DEBUG 2015-04-14 15:05:08,326: 	 Loading configuration
+ERROR: ImportError: No module named crab.cfg
+
+	Please email hn-cms-computing-tools@cern.ch for support with the crab.log file or crab.log URL.
+	Client Version: 3.3.15
+Unhandled Exception!
+No module named crab.cfg
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 50, in loadConfig
+    self.configuration = loadConfigurationFile(os.path.abspath(configname))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/WMCore/Configuration.py", line 549, in loadConfigurationFile
+    modPath = imp.find_module(cfgBaseName, [cfgDirName])
+ImportError: No module named crab.cfg
+	Please use crab uploadlog to upload the log file /afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab.log
+DEBUG 2015-04-14 15:05:16,965: 	 Executing command: 'submit'
+DEBUG 2015-04-14 15:05:16,965: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-14 15:05:16,973: 	 Checking credentials
+DEBUG 2015-04-14 15:05:16,973: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-14 15:05:16,973: 	 Getting proxy life time left
+DEBUG 2015-04-14 15:05:17,580: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40012
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 15:05:18,186: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40011
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 15:05:18,186: 	 Proxy valid for 11:06:52 hours
+ERROR 2015-04-14 15:05:18,187: 	 Configuration file 'fg' not found.
+ERROR 2015-04-14 15:05:18,187: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 46, in loadConfig
+    raise ConfigurationException("Configuration file '%s' not found." % configname)
+ConfigurationException: Configuration file 'fg' not found.
+DEBUG 2015-04-14 17:42:24,014: 	 Executing command: 'submit'
+DEBUG 2015-04-14 17:42:24,034: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-14 17:42:24,050: 	 Checking credentials
+DEBUG 2015-04-14 17:42:24,051: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-14 17:42:24,051: 	 Getting proxy life time left
+DEBUG 2015-04-14 17:42:24,662: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 30585
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 17:42:25,582: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 30584
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-14 17:42:25,582: 	 Proxy valid for 08:29:45 hours
+ERROR 2015-04-14 17:42:25,582: 	 Configuration file 'crab.test.py' not found.
+ERROR 2015-04-14 17:42:25,582: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 46, in loadConfig
+    raise ConfigurationException("Configuration file '%s' not found." % configname)
+ConfigurationException: Configuration file 'crab.test.py' not found.
+DEBUG 2015-04-15 10:55:22,011: 	 Executing command: 'submit'
+DEBUG 2015-04-15 10:55:22,013: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 10:55:22,038: 	 Checking credentials
+DEBUG 2015-04-15 10:55:22,038: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 10:55:22,038: 	 Getting proxy life time left
+DEBUG 2015-04-15 10:55:22,542: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 43164
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:55:23,050: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 43164
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:55:23,050: 	 Proxy valid for 11:59:24 hours
+INFO 2015-04-15 10:55:23,050: 	 Will use configuration file crabtest.py.
+DEBUG 2015-04-15 10:55:23,050: 	 Loading configuration
+ERROR 2015-04-15 10:55:23,084: 	 Configuration syntax error:
+name 'T1_US_FNAL' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+ERROR 2015-04-15 10:55:23,084: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 82, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Configuration syntax error:
+name 'T1_US_FNAL' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+DEBUG 2015-04-15 10:55:46,941: 	 Executing command: 'submit'
+DEBUG 2015-04-15 10:55:46,941: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 10:55:46,963: 	 Checking credentials
+DEBUG 2015-04-15 10:55:46,964: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 10:55:46,964: 	 Getting proxy life time left
+DEBUG 2015-04-15 10:55:47,470: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 43139
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:55:47,975: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 43139
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:55:47,975: 	 Proxy valid for 11:58:59 hours
+INFO 2015-04-15 10:55:47,975: 	 Will use configuration file crabtest.py.
+DEBUG 2015-04-15 10:55:47,975: 	 Loading configuration
+ERROR 2015-04-15 10:55:47,982: 	 Configuration syntax error:
+name 'T3_US_FNAL' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+ERROR 2015-04-15 10:55:47,983: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 82, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Configuration syntax error:
+name 'T3_US_FNAL' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+DEBUG 2015-04-15 10:57:09,534: 	 Executing command: 'submit'
+DEBUG 2015-04-15 10:57:09,535: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 10:57:09,543: 	 Checking credentials
+DEBUG 2015-04-15 10:57:09,543: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 10:57:09,543: 	 Getting proxy life time left
+DEBUG 2015-04-15 10:57:10,050: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 43057
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:57:10,554: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 43056
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:57:10,555: 	 Proxy valid for 11:57:37 hours
+INFO 2015-04-15 10:57:10,555: 	 Will use configuration file crabtest.py.
+DEBUG 2015-04-15 10:57:10,555: 	 Loading configuration
+ERROR 2015-04-15 10:57:10,563: 	 Configuration syntax error:
+name 'T0_CH_CERN' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+ERROR 2015-04-15 10:57:10,563: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 82, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Configuration syntax error:
+name 'T0_CH_CERN' is not defined
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+DEBUG 2015-04-15 10:57:42,955: 	 Executing command: 'submit'
+DEBUG 2015-04-15 10:57:42,955: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 10:57:42,962: 	 Checking credentials
+DEBUG 2015-04-15 10:57:42,963: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 10:57:42,963: 	 Getting proxy life time left
+DEBUG 2015-04-15 10:57:43,473: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 43023
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:57:43,977: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 43023
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:57:43,977: 	 Proxy valid for 11:57:03 hours
+INFO 2015-04-15 10:57:43,978: 	 Will use configuration file crabtest.py.
+DEBUG 2015-04-15 10:57:43,978: 	 Loading configuration
+ERROR 2015-04-15 10:57:43,981: 	 Invalid CRAB configuration: Parameter JobType.outputFiles requires a value of type <type 'list'> (while a value of type <type 'str'> was given).
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+ERROR 2015-04-15 10:57:43,982: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 87, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Invalid CRAB configuration: Parameter JobType.outputFiles requires a value of type <type 'list'> (while a value of type <type 'str'> was given).
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+DEBUG 2015-04-15 10:58:51,854: 	 Executing command: 'submit'
+DEBUG 2015-04-15 10:58:51,854: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 10:58:51,863: 	 Checking credentials
+DEBUG 2015-04-15 10:58:51,864: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 10:58:51,864: 	 Getting proxy life time left
+DEBUG 2015-04-15 10:58:52,470: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 42954
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:58:52,975: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 42954
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 10:58:52,975: 	 Proxy valid for 11:55:54 hours
+INFO 2015-04-15 10:58:52,975: 	 Will use configuration file crabtest.py.
+DEBUG 2015-04-15 10:58:52,975: 	 Loading configuration
+ERROR 2015-04-15 10:58:52,980: 	 Configuration syntax error:
+Unsupported Type: <type 'set'>
+Added to WMAgent Configuration
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+ERROR 2015-04-15 10:58:52,980: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 264, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 82, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Configuration syntax error:
+Unsupported Type: <type 'set'>
+Added to WMAgent Configuration
+Please refer to https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3CommonErrors#Configuration_syntax_error.
+See the ./crab.log file for more details.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile.
+DEBUG 2015-04-15 11:00:58,992: 	 Executing command: 'submit'
+DEBUG 2015-04-15 11:00:58,993: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:00:59,001: 	 Checking credentials
+DEBUG 2015-04-15 11:00:59,001: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:00:59,001: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:00:59,507: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 42827
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:01:00,012: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 42827
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:01:00,013: 	 Proxy valid for 11:53:47 hours
+INFO 2015-04-15 11:01:00,013: 	 Will use configuration file crabtest.py.
+DEBUG 2015-04-15 11:01:00,013: 	 Loading configuration
+DEBUG 2015-04-15 11:01:00,016: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2015-04-15 11:01:00,017: 	 Working area '/afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet' already exists 
+Please change the requestName in the config file
+ERROR 2015-04-15 11:01:00,017: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 268, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 335, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet' already exists 
+Please change the requestName in the config file
+DEBUG 2015-04-15 11:29:15,249: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:29:15,249: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:29:15,291: 	 Checking credentials
+DEBUG 2015-04-15 11:29:15,292: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:29:15,292: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:29:15,899: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 41131
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:29:16,507: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 41130
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:29:16,507: 	 Proxy valid for 11:25:31 hours
+DEBUG 2015-04-15 11:29:16,619: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:29:16,619: 	 Checking credentials
+DEBUG 2015-04-15 11:29:16,619: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:29:16,619: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:29:17,124: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 41129
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:29:17,631: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 41129
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:29:17,631: 	 Proxy valid for 11:25:29 hours
+DEBUG 2015-04-15 11:29:18,143: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:29:18,143: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:29:18,143: 	 Options use: ['--site=T2_CH_CERN']
+DEBUG 2015-04-15 11:29:18,143: 	 Instance is None
+DEBUG 2015-04-15 11:29:18,143: 	 Server base url is None
+DEBUG 2015-04-15 11:29:18,172: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_1cpJLh/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_1cpJLh/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_1cpJLh/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x1a695a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x1d1cc10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x1a6b910>}, 'logger': <logging.Logger object at 0x1d1cc10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_1cpJLh/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:29:18,172: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:29:18,172: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:29:19,387: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:29:19,388: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:29:22,084: 	 Username is: shtan
+INFO 2015-04-15 11:29:22,085: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:29:22,085: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:29:22,108: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:29:22,109: 	 Will check write permission in /store/user/shtan on site T2_CH_CERN
+DEBUG 2015-04-15 11:29:22,111: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T2_CH_CERN'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+INFO 2015-04-15 11:29:22,955: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/shtan on site T2_CH_CERN
+INFO 2015-04-15 11:29:22,961: 	 Executing command: env -i gfal-copy -v -t 180 file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp 'srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp'
+INFO 2015-04-15 11:29:22,961: 	 Please wait...
+INFO 2015-04-15 11:29:23,491: 	 Failed running copy command
+INFO 2015-04-15 11:29:23,491: 	   Stdout:
+    event: [1429090163424] BOTH   SRM	PREPARE:ENTER	
+    
+INFO 2015-04-15 11:29:23,491: 	   Stderr:
+    GFAL2-Message: ... no GFAL_PLUGIN_DIR environnement variable specified, try to load plugins in the default directory : /usr/lib64/gfal2-plugins/
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_file.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_lfc.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_xrootd.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_gridftp.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_srm.so
+    GFAL2-Message:     -> load dcap library 
+    GFAL2-Message:   end load dcap library <-
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_dcap.so
+    GFAL2-Message: lib rfio is not defined in LCG_RFIO_TYPE, try to found it 
+    GFAL2-Message: rfio library libdpm.so.1 found! configured to use it
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_rfio.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_http.so
+    GFAL2-Message: SRM context not available
+    GFAL2-Message:    [gfal_srm_statG] try to stat file srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp
+    GFAL2-Message: Endpoint not SRM: file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp
+    GFAL2-Message: SRM context recycled for httpg://srm-eoscms.cern.ch:8443/srm/v2/server
+    GFAL2-Message: Endpoint of type BeStMan: srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp
+    GFAL2-Message: No Castor endpoint. Honor configuration for SESSION_REUSE
+    GFAL2-Message: Event triggered: BOTH SRM PREPARE:ENTER 
+    GFAL2-Message: 		Checksum check enabled: 0
+    GFAL2-Message: SRM context recycled for httpg://srm-eoscms.cern.ch:8443/srm/v2/server
+    GFAL2-Message: Rolling back PUT
+    gfal-util error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp 
+    
+INFO 2015-04-15 11:29:23,492: 	 Error copying file crab3checkwrite.0.tmp to /store/user/shtan on site T2_CH_CERN; it may be that file already exists.
+INFO 2015-04-15 11:29:23,492: 	 Attempting to delete file srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp from site T2_CH_CERN
+INFO 2015-04-15 11:29:23,492: 	 Executing command: env -i gfal-rm -v -t 180 'srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp'
+INFO 2015-04-15 11:29:23,492: 	 Please wait...
+INFO 2015-04-15 11:29:23,880: 	 Successfully deleted file srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp from site T2_CH_CERN
+INFO 2015-04-15 11:29:23,880: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/shtan on site T2_CH_CERN
+INFO 2015-04-15 11:29:23,891: 	 Executing command: env -i gfal-copy -v -t 180 file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp 'srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp'
+INFO 2015-04-15 11:29:23,891: 	 Please wait...
+INFO 2015-04-15 11:29:24,291: 	 Failed running copy command
+INFO 2015-04-15 11:29:24,292: 	   Stdout:
+    event: [1429090164248] BOTH   SRM	PREPARE:ENTER	
+    
+INFO 2015-04-15 11:29:24,292: 	   Stderr:
+    GFAL2-Message: ... no GFAL_PLUGIN_DIR environnement variable specified, try to load plugins in the default directory : /usr/lib64/gfal2-plugins/
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_file.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_lfc.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_xrootd.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_gridftp.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_srm.so
+    GFAL2-Message:     -> load dcap library 
+    GFAL2-Message:   end load dcap library <-
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_dcap.so
+    GFAL2-Message: lib rfio is not defined in LCG_RFIO_TYPE, try to found it 
+    GFAL2-Message: rfio library libdpm.so.1 found! configured to use it
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_rfio.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_http.so
+    GFAL2-Message: SRM context not available
+    GFAL2-Message:    [gfal_srm_statG] try to stat file srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp
+    GFAL2-Message: Endpoint not SRM: file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp
+    GFAL2-Message: SRM context recycled for httpg://srm-eoscms.cern.ch:8443/srm/v2/server
+    GFAL2-Message: Endpoint of type BeStMan: srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp
+    GFAL2-Message: No Castor endpoint. Honor configuration for SESSION_REUSE
+    GFAL2-Message: Event triggered: BOTH SRM PREPARE:ENTER 
+    GFAL2-Message: 		Checksum check enabled: 0
+    GFAL2-Message: SRM context recycled for httpg://srm-eoscms.cern.ch:8443/srm/v2/server
+    GFAL2-Message: Rolling back PUT
+    gfal-util error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp 
+    
+INFO 2015-04-15 11:29:24,292: 	 Unable to check write permission in /store/user/shtan on site T2_CH_CERN
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2015-04-15 11:29:24,368: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2015-04-15 11:33:50,346: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:33:50,347: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:33:50,360: 	 Checking credentials
+DEBUG 2015-04-15 11:33:50,360: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:33:50,360: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:33:50,865: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40856
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:33:51,269: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40855
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:33:51,269: 	 Proxy valid for 11:20:56 hours
+DEBUG 2015-04-15 11:33:51,377: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:33:51,377: 	 Checking credentials
+DEBUG 2015-04-15 11:33:51,377: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:33:51,377: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:33:51,881: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40855
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:33:52,285: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40854
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:33:52,286: 	 Proxy valid for 11:20:55 hours
+DEBUG 2015-04-15 11:33:52,690: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:33:52,690: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:33:52,690: 	 Options use: ['--site=T2_US_FNAL']
+DEBUG 2015-04-15 11:33:52,690: 	 Instance is None
+DEBUG 2015-04-15 11:33:52,690: 	 Server base url is None
+DEBUG 2015-04-15 11:33:52,710: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_Gs4lGA/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_Gs4lGA/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_Gs4lGA/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0xaab5a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0xd63c10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0xaad910>}, 'logger': <logging.Logger object at 0xd63c10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_Gs4lGA/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:33:52,711: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:33:52,711: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:33:53,941: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:33:53,941: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:33:55,904: 	 Username is: shtan
+INFO 2015-04-15 11:33:55,905: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:33:55,905: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:33:55,920: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:33:55,920: 	 Will check write permission in /store/user/shtan on site T2_US_FNAL
+DEBUG 2015-04-15 11:33:55,923: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T2_US_FNAL'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:33:56,374: 	 The cachefile /tmp/shtan/.wmcore_cache_Gs4lGA/cmsweb.cern.ch/-5298077094868711219_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T2_US_FNAL '.\n
+
+INFO 2015-04-15 11:33:56,374: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:33:56,374: 	 Result: no nodes found for ' T2_US_FNAL '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T2_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:33:56,374: 	 Error contacting the server.
+DEBUG 2015-04-15 11:33:56,374: 	 ERROR: Bad Request (400):  'no nodes found for ' T2_US_FNAL '.\n'
+DEBUG 2015-04-15 11:33:56,374: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T2_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:33:56,375: 	      Input data: 
+DEBUG 2015-04-15 11:33:56,375: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 09:48:56 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:33:56 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=35482 t=1429090436337049'}
+ERROR 2015-04-15 11:33:56,375: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:34:24,322: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:34:24,322: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:34:24,329: 	 Checking credentials
+DEBUG 2015-04-15 11:34:24,329: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:34:24,329: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:34:24,834: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40822
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:25,341: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40821
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:25,341: 	 Proxy valid for 11:20:22 hours
+DEBUG 2015-04-15 11:34:25,450: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:34:25,450: 	 Checking credentials
+DEBUG 2015-04-15 11:34:25,450: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:34:25,450: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:34:25,954: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40821
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:26,460: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40820
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:26,461: 	 Proxy valid for 11:20:21 hours
+DEBUG 2015-04-15 11:34:26,966: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:26,967: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:34:26,967: 	 Options use: ['--site=T1_US_FNAL']
+DEBUG 2015-04-15 11:34:26,967: 	 Instance is None
+DEBUG 2015-04-15 11:34:26,967: 	 Server base url is None
+DEBUG 2015-04-15 11:34:26,970: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_MT45z6/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_MT45z6/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_MT45z6/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x279a5a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x2a51c10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x279c910>}, 'logger': <logging.Logger object at 0x2a51c10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_MT45z6/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:34:26,970: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:34:26,970: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:34:28,162: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:34:28,163: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:34:30,235: 	 Username is: shtan
+INFO 2015-04-15 11:34:30,235: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:34:30,235: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:34:30,247: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:34:30,248: 	 Will check write permission in /store/user/shtan on site T1_US_FNAL
+DEBUG 2015-04-15 11:34:30,251: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T1_US_FNAL'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:34:30,642: 	 The cachefile /tmp/shtan/.wmcore_cache_MT45z6/cmsweb.cern.ch/-7334321406014107022_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T1_US_FNAL '.\n
+
+INFO 2015-04-15 11:34:30,643: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:34:30,643: 	 Result: no nodes found for ' T1_US_FNAL '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T1_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:34:30,643: 	 Error contacting the server.
+DEBUG 2015-04-15 11:34:30,643: 	 ERROR: Bad Request (400):  'no nodes found for ' T1_US_FNAL '.\n'
+DEBUG 2015-04-15 11:34:30,643: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T1_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:34:30,643: 	      Input data: 
+DEBUG 2015-04-15 11:34:30,643: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 09:49:30 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:34:30 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=31182 t=1429090470609549'}
+ERROR 2015-04-15 11:34:30,643: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:34:37,131: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:34:37,131: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:34:37,147: 	 Checking credentials
+DEBUG 2015-04-15 11:34:37,149: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:34:37,149: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:34:37,755: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40809
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:38,158: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40808
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:38,159: 	 Proxy valid for 11:20:09 hours
+DEBUG 2015-04-15 11:34:38,269: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:34:38,269: 	 Checking credentials
+DEBUG 2015-04-15 11:34:38,269: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:34:38,269: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:34:38,773: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40808
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:39,179: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40807
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:39,179: 	 Proxy valid for 11:20:08 hours
+DEBUG 2015-04-15 11:34:39,683: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:39,683: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:34:39,683: 	 Options use: ['--site=T0_US_FNAL']
+DEBUG 2015-04-15 11:34:39,683: 	 Instance is None
+DEBUG 2015-04-15 11:34:39,683: 	 Server base url is None
+DEBUG 2015-04-15 11:34:39,687: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_dF12VU/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_dF12VU/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_dF12VU/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0xb5f5a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0xe19c10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0xb61910>}, 'logger': <logging.Logger object at 0xe19c10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_dF12VU/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:34:39,687: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:34:39,687: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:34:40,858: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:34:40,859: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:34:43,677: 	 Username is: shtan
+INFO 2015-04-15 11:34:43,677: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:34:43,677: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:34:43,688: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:34:43,689: 	 Will check write permission in /store/user/shtan on site T0_US_FNAL
+DEBUG 2015-04-15 11:34:43,690: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T0_US_FNAL'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:34:44,056: 	 The cachefile /tmp/shtan/.wmcore_cache_dF12VU/cmsweb.cern.ch/-1634700224852139249_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T0_US_FNAL '.\n
+
+INFO 2015-04-15 11:34:44,056: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:34:44,056: 	 Result: no nodes found for ' T0_US_FNAL '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T0_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:34:44,056: 	 Error contacting the server.
+DEBUG 2015-04-15 11:34:44,056: 	 ERROR: Bad Request (400):  'no nodes found for ' T0_US_FNAL '.\n'
+DEBUG 2015-04-15 11:34:44,056: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T0_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:34:44,056: 	      Input data: 
+DEBUG 2015-04-15 11:34:44,056: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 09:49:44 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:34:44 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=20414 t=1429090484033792'}
+ERROR 2015-04-15 11:34:44,057: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:34:51,443: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:34:51,444: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:34:51,453: 	 Checking credentials
+DEBUG 2015-04-15 11:34:51,453: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:34:51,453: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:34:51,957: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40795
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:52,362: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40794
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:52,362: 	 Proxy valid for 11:19:55 hours
+DEBUG 2015-04-15 11:34:52,470: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:34:52,471: 	 Checking credentials
+DEBUG 2015-04-15 11:34:52,471: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:34:52,471: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:34:52,976: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40794
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:53,382: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40793
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:53,382: 	 Proxy valid for 11:19:54 hours
+DEBUG 2015-04-15 11:34:53,886: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:34:53,887: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:34:53,887: 	 Options use: ['--site=T3_US_FNAL']
+DEBUG 2015-04-15 11:34:53,887: 	 Instance is None
+DEBUG 2015-04-15 11:34:53,887: 	 Server base url is None
+DEBUG 2015-04-15 11:34:53,899: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_k5GAM_/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_k5GAM_/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_k5GAM_/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x17c55a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x1a78c10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x17c7910>}, 'logger': <logging.Logger object at 0x1a78c10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_k5GAM_/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:34:53,899: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:34:53,899: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:34:55,023: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:34:55,023: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:34:57,556: 	 Username is: shtan
+INFO 2015-04-15 11:34:57,557: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:34:57,557: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:34:57,572: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:34:57,573: 	 Will check write permission in /store/user/shtan on site T3_US_FNAL
+DEBUG 2015-04-15 11:34:57,574: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_US_FNAL'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:34:58,882: 	 The cachefile /tmp/shtan/.wmcore_cache_k5GAM_/cmsweb.cern.ch/-4108740183304543464_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T3_US_FNAL '.\n
+
+INFO 2015-04-15 11:34:58,882: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:34:58,882: 	 Result: no nodes found for ' T3_US_FNAL '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T3_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:34:58,882: 	 Error contacting the server.
+DEBUG 2015-04-15 11:34:58,882: 	 ERROR: Bad Request (400):  'no nodes found for ' T3_US_FNAL '.\n'
+DEBUG 2015-04-15 11:34:58,882: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T3_US_FNAL&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:34:58,882: 	      Input data: 
+DEBUG 2015-04-15 11:34:58,882: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 09:49:58 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:34:58 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=37120 t=1429090498842995'}
+ERROR 2015-04-15 11:34:58,882: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:46:22,673: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:46:22,674: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:46:22,686: 	 Checking credentials
+DEBUG 2015-04-15 11:46:22,686: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:46:22,686: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:46:23,190: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40103
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:46:23,593: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40103
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:46:23,594: 	 Proxy valid for 11:08:23 hours
+DEBUG 2015-04-15 11:46:23,706: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:46:23,706: 	 Checking credentials
+DEBUG 2015-04-15 11:46:23,707: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:46:23,707: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:46:24,311: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40102
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:46:24,818: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40102
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:46:24,818: 	 Proxy valid for 11:08:22 hours
+DEBUG 2015-04-15 11:46:25,424: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:46:25,424: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:46:25,424: 	 Options use: ['--site=T3_US_FNALLPC']
+DEBUG 2015-04-15 11:46:25,424: 	 Instance is None
+DEBUG 2015-04-15 11:46:25,424: 	 Server base url is None
+DEBUG 2015-04-15 11:46:25,448: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_RDS_bT/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_RDS_bT/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_RDS_bT/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x2144560>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x23fbc50>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x2146950>}, 'logger': <logging.Logger object at 0x23fbc50>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_RDS_bT/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:46:25,448: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:46:25,448: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:46:26,717: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:46:26,718: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:46:28,967: 	 Username is: shtan
+INFO 2015-04-15 11:46:28,967: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:46:28,967: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:46:29,004: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:46:29,004: 	 Will check write permission in /store/user/shtan on site T3_US_FNALLPC
+DEBUG 2015-04-15 11:46:29,009: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T3_US_FNALLPC'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+INFO 2015-04-15 11:46:29,504: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/shtan on site T3_US_FNALLPC
+INFO 2015-04-15 11:46:29,509: 	 Executing command: env -i gfal-copy -v -t 180 file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/shtan/crab3checkwrite.0.tmp'
+INFO 2015-04-15 11:46:29,509: 	 Please wait...
+INFO 2015-04-15 11:46:33,067: 	 Successfully copied file crab3checkwrite.0.tmp to /store/user/shtan on site T3_US_FNALLPC
+INFO 2015-04-15 11:46:33,068: 	 Attempting to delete file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/shtan/crab3checkwrite.0.tmp from site T3_US_FNALLPC
+INFO 2015-04-15 11:46:33,068: 	 Executing command: env -i gfal-rm -v -t 180 'srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/shtan/crab3checkwrite.0.tmp'
+INFO 2015-04-15 11:46:33,068: 	 Please wait...
+INFO 2015-04-15 11:46:33,858: 	 Successfully deleted file srm://cmseos.fnal.gov:8443/srm/v2/server?SFN=/eos/uscms/store/user/shtan/crab3checkwrite.0.tmp from site T3_US_FNALLPC
+INFO 2015-04-15 11:46:33,858: 	 Success: Able to write in /store/user/shtan on site T3_US_FNALLPC
+INFO 2015-04-15 11:46:33,922: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2015-04-15 11:50:50,874: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:50:50,875: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+INFO 2015-04-15 11:50:50,875: 	 Missing site name, use '--site' option
+ERROR 2015-04-15 11:50:50,875: 	 
+ERROR 2015-04-15 11:50:50,876: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 20, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 239, in __init__
+    self.validateOptions()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 232, in validateOptions
+    raise MissingOptionException
+MissingOptionException
+DEBUG 2015-04-15 11:50:57,245: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:50:57,245: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:50:57,257: 	 Checking credentials
+DEBUG 2015-04-15 11:50:57,258: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:50:57,258: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:50:57,867: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39829
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:50:58,373: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39828
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:50:58,373: 	 Proxy valid for 11:03:49 hours
+DEBUG 2015-04-15 11:50:58,482: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:50:58,482: 	 Checking credentials
+DEBUG 2015-04-15 11:50:58,482: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:50:58,483: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:50:58,986: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39828
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:50:59,494: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39827
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:50:59,494: 	 Proxy valid for 11:03:48 hours
+DEBUG 2015-04-15 11:51:00,000: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:00,000: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:51:00,000: 	 Options use: ['--site=T2_US_CERN']
+DEBUG 2015-04-15 11:51:00,000: 	 Instance is None
+DEBUG 2015-04-15 11:51:00,000: 	 Server base url is None
+DEBUG 2015-04-15 11:51:00,027: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_NABaVI/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_NABaVI/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_NABaVI/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x20e85a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x239bc10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x20ea910>}, 'logger': <logging.Logger object at 0x239bc10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_NABaVI/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:51:00,027: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:51:00,027: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:51:01,243: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:51:01,243: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:51:03,443: 	 Username is: shtan
+INFO 2015-04-15 11:51:03,443: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:51:03,443: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:51:03,461: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:51:03,461: 	 Will check write permission in /store/user/shtan on site T2_US_CERN
+DEBUG 2015-04-15 11:51:03,464: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T2_US_CERN'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:51:03,938: 	 The cachefile /tmp/shtan/.wmcore_cache_NABaVI/cmsweb.cern.ch/7490903791917910610_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T2_US_CERN '.\n
+
+INFO 2015-04-15 11:51:03,938: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:51:03,938: 	 Result: no nodes found for ' T2_US_CERN '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T2_US_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:51:03,938: 	 Error contacting the server.
+DEBUG 2015-04-15 11:51:03,938: 	 ERROR: Bad Request (400):  'no nodes found for ' T2_US_CERN '.\n'
+DEBUG 2015-04-15 11:51:03,938: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T2_US_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:51:03,938: 	      Input data: 
+DEBUG 2015-04-15 11:51:03,938: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 10:06:03 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:51:03 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=28375 t=1429091463908452'}
+ERROR 2015-04-15 11:51:03,938: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:51:11,670: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:51:11,670: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:51:11,677: 	 Checking credentials
+DEBUG 2015-04-15 11:51:11,677: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:51:11,678: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:51:12,185: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39814
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:12,792: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39814
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:12,792: 	 Proxy valid for 11:03:34 hours
+DEBUG 2015-04-15 11:51:12,904: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:51:12,904: 	 Checking credentials
+DEBUG 2015-04-15 11:51:12,904: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:51:12,904: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:51:13,410: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39813
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:13,920: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39813
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:13,920: 	 Proxy valid for 11:03:33 hours
+DEBUG 2015-04-15 11:51:14,425: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:14,425: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:51:14,425: 	 Options use: ['--site=T0_US_CERN']
+DEBUG 2015-04-15 11:51:14,425: 	 Instance is None
+DEBUG 2015-04-15 11:51:14,425: 	 Server base url is None
+DEBUG 2015-04-15 11:51:14,428: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_7iH_oU/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_7iH_oU/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_7iH_oU/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x187d5a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x1b30c10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x187f910>}, 'logger': <logging.Logger object at 0x1b30c10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_7iH_oU/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:51:14,428: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:51:14,428: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:51:15,658: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:51:15,659: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:51:17,953: 	 Username is: shtan
+INFO 2015-04-15 11:51:17,953: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:51:17,953: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:51:17,964: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:51:17,964: 	 Will check write permission in /store/user/shtan on site T0_US_CERN
+DEBUG 2015-04-15 11:51:17,966: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T0_US_CERN'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:51:18,342: 	 The cachefile /tmp/shtan/.wmcore_cache_7iH_oU/cmsweb.cern.ch/-2165109603465589864_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T0_US_CERN '.\n
+
+INFO 2015-04-15 11:51:18,342: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:51:18,342: 	 Result: no nodes found for ' T0_US_CERN '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T0_US_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:51:18,342: 	 Error contacting the server.
+DEBUG 2015-04-15 11:51:18,343: 	 ERROR: Bad Request (400):  'no nodes found for ' T0_US_CERN '.\n'
+DEBUG 2015-04-15 11:51:18,343: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T0_US_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:51:18,343: 	      Input data: 
+DEBUG 2015-04-15 11:51:18,343: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 10:06:18 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:51:18 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=29017 t=1429091478311998'}
+ERROR 2015-04-15 11:51:18,343: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:51:24,511: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:51:24,511: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:51:24,519: 	 Checking credentials
+DEBUG 2015-04-15 11:51:24,519: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:51:24,519: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:51:25,022: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39802
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:25,530: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39801
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:25,531: 	 Proxy valid for 11:03:22 hours
+DEBUG 2015-04-15 11:51:25,642: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:51:25,642: 	 Checking credentials
+DEBUG 2015-04-15 11:51:25,642: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:51:25,642: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:51:26,147: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39800
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:26,652: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39800
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:26,653: 	 Proxy valid for 11:03:20 hours
+DEBUG 2015-04-15 11:51:27,158: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:27,159: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:51:27,159: 	 Options use: ['--site=T1_US_CERN']
+DEBUG 2015-04-15 11:51:27,159: 	 Instance is None
+DEBUG 2015-04-15 11:51:27,159: 	 Server base url is None
+DEBUG 2015-04-15 11:51:27,162: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_8syZy8/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_8syZy8/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_8syZy8/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0xa7f5a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0xd43c10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0xa81910>}, 'logger': <logging.Logger object at 0xd43c10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_8syZy8/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:51:27,162: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:51:27,162: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:51:28,496: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:51:28,496: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:51:30,714: 	 Username is: shtan
+INFO 2015-04-15 11:51:30,715: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:51:30,715: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:51:30,729: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:51:30,730: 	 Will check write permission in /store/user/shtan on site T1_US_CERN
+DEBUG 2015-04-15 11:51:30,731: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T1_US_CERN'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:51:31,108: 	 The cachefile /tmp/shtan/.wmcore_cache_8syZy8/cmsweb.cern.ch/-2646460721368717999_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T1_US_CERN '.\n
+
+INFO 2015-04-15 11:51:31,108: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:51:31,108: 	 Result: no nodes found for ' T1_US_CERN '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T1_US_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:51:31,108: 	 Error contacting the server.
+DEBUG 2015-04-15 11:51:31,108: 	 ERROR: Bad Request (400):  'no nodes found for ' T1_US_CERN '.\n'
+DEBUG 2015-04-15 11:51:31,108: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T1_US_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:51:31,108: 	      Input data: 
+DEBUG 2015-04-15 11:51:31,108: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 10:06:31 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:51:31 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=20908 t=1429091491084694'}
+ERROR 2015-04-15 11:51:31,108: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:51:36,691: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:51:36,691: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:51:36,698: 	 Checking credentials
+DEBUG 2015-04-15 11:51:36,698: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:51:36,698: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:51:37,201: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39789
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:37,706: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39789
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:37,706: 	 Proxy valid for 11:03:09 hours
+DEBUG 2015-04-15 11:51:37,816: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:51:37,816: 	 Checking credentials
+DEBUG 2015-04-15 11:51:37,816: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:51:37,816: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:51:38,322: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39788
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:38,926: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39788
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:38,926: 	 Proxy valid for 11:03:08 hours
+DEBUG 2015-04-15 11:51:39,431: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:51:39,432: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:51:39,432: 	 Options use: ['--site=T2_CH_CERN']
+DEBUG 2015-04-15 11:51:39,432: 	 Instance is None
+DEBUG 2015-04-15 11:51:39,432: 	 Server base url is None
+DEBUG 2015-04-15 11:51:39,435: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_a9yS8q/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_a9yS8q/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_a9yS8q/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x21005a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x23b3c10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x2102910>}, 'logger': <logging.Logger object at 0x23b3c10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_a9yS8q/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:51:39,435: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:51:39,435: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:51:40,693: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:51:40,694: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:51:42,997: 	 Username is: shtan
+INFO 2015-04-15 11:51:42,997: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:51:42,997: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:51:43,008: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:51:43,009: 	 Will check write permission in /store/user/shtan on site T2_CH_CERN
+DEBUG 2015-04-15 11:51:43,032: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T2_CH_CERN'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+INFO 2015-04-15 11:51:43,417: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/shtan on site T2_CH_CERN
+INFO 2015-04-15 11:51:43,421: 	 Executing command: env -i gfal-copy -v -t 180 file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp 'srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp'
+INFO 2015-04-15 11:51:43,422: 	 Please wait...
+INFO 2015-04-15 11:51:43,876: 	 Failed running copy command
+INFO 2015-04-15 11:51:43,876: 	   Stdout:
+    event: [1429091503799] BOTH   SRM	PREPARE:ENTER	
+    
+INFO 2015-04-15 11:51:43,876: 	   Stderr:
+    GFAL2-Message: ... no GFAL_PLUGIN_DIR environnement variable specified, try to load plugins in the default directory : /usr/lib64/gfal2-plugins/
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_file.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_lfc.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_xrootd.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_gridftp.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_srm.so
+    GFAL2-Message:     -> load dcap library 
+    GFAL2-Message:   end load dcap library <-
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_dcap.so
+    GFAL2-Message: lib rfio is not defined in LCG_RFIO_TYPE, try to found it 
+    GFAL2-Message: rfio library libdpm.so.1 found! configured to use it
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_rfio.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_http.so
+    GFAL2-Message: SRM context not available
+    GFAL2-Message:    [gfal_srm_statG] try to stat file srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp
+    GFAL2-Message: Endpoint not SRM: file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp
+    GFAL2-Message: SRM context recycled for httpg://srm-eoscms.cern.ch:8443/srm/v2/server
+    GFAL2-Message: Endpoint of type BeStMan: srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp
+    GFAL2-Message: No Castor endpoint. Honor configuration for SESSION_REUSE
+    GFAL2-Message: Event triggered: BOTH SRM PREPARE:ENTER 
+    GFAL2-Message: 		Checksum check enabled: 0
+    GFAL2-Message: SRM context recycled for httpg://srm-eoscms.cern.ch:8443/srm/v2/server
+    GFAL2-Message: Rolling back PUT
+    gfal-util error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp 
+    
+INFO 2015-04-15 11:51:43,876: 	 Error copying file crab3checkwrite.0.tmp to /store/user/shtan on site T2_CH_CERN; it may be that file already exists.
+INFO 2015-04-15 11:51:43,877: 	 Attempting to delete file srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp from site T2_CH_CERN
+INFO 2015-04-15 11:51:43,877: 	 Executing command: env -i gfal-rm -v -t 180 'srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp'
+INFO 2015-04-15 11:51:43,877: 	 Please wait...
+INFO 2015-04-15 11:51:44,271: 	 Successfully deleted file srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp from site T2_CH_CERN
+INFO 2015-04-15 11:51:44,272: 	 Attempting to copy (dummy) file crab3checkwrite.0.tmp to /store/user/shtan on site T2_CH_CERN
+INFO 2015-04-15 11:51:44,277: 	 Executing command: env -i gfal-copy -v -t 180 file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp 'srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp'
+INFO 2015-04-15 11:51:44,277: 	 Please wait...
+INFO 2015-04-15 11:51:44,677: 	 Failed running copy command
+INFO 2015-04-15 11:51:44,678: 	   Stdout:
+    event: [1429091504634] BOTH   SRM	PREPARE:ENTER	
+    
+INFO 2015-04-15 11:51:44,678: 	   Stderr:
+    GFAL2-Message: ... no GFAL_PLUGIN_DIR environnement variable specified, try to load plugins in the default directory : /usr/lib64/gfal2-plugins/
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_file.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_lfc.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_xrootd.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_gridftp.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_srm.so
+    GFAL2-Message:     -> load dcap library 
+    GFAL2-Message:   end load dcap library <-
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_dcap.so
+    GFAL2-Message: lib rfio is not defined in LCG_RFIO_TYPE, try to found it 
+    GFAL2-Message: rfio library libdpm.so.1 found! configured to use it
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_rfio.so
+    GFAL2-Message:  gfal_plugin loaded succesfully : /usr/lib64/gfal2-plugins//libgfal_plugin_http.so
+    GFAL2-Message: SRM context not available
+    GFAL2-Message:    [gfal_srm_statG] try to stat file srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp
+    GFAL2-Message: Endpoint not SRM: file:///afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab3checkwrite.0.tmp
+    GFAL2-Message: SRM context recycled for httpg://srm-eoscms.cern.ch:8443/srm/v2/server
+    GFAL2-Message: Endpoint of type BeStMan: srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp
+    GFAL2-Message: No Castor endpoint. Honor configuration for SESSION_REUSE
+    GFAL2-Message: Event triggered: BOTH SRM PREPARE:ENTER 
+    GFAL2-Message: 		Checksum check enabled: 0
+    GFAL2-Message: SRM context recycled for httpg://srm-eoscms.cern.ch:8443/srm/v2/server
+    GFAL2-Message: Rolling back PUT
+    gfal-util error: 2 (No such file or directory) - DESTINATION SRM_PUT_TURL error on the turl request : [SE][PrepareToPut][SRM_INVALID_PATH] Dir structure does not exist.srm://srm-eoscms.cern.ch:8443/srm/v2/server?SFN=/eos/cms/store/user/shtan/crab3checkwrite.0.tmp 
+    
+INFO 2015-04-15 11:51:44,678: 	 Unable to check write permission in /store/user/shtan on site T2_CH_CERN
+Please try again later or contact the site administrators sending them the 'crab checkwrite' output as printed above.
+INFO 2015-04-15 11:51:44,740: 	 Note: You cannot write to a site if you did not ask permission.
+DEBUG 2015-04-15 11:52:27,181: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:52:27,181: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:52:27,194: 	 Checking credentials
+DEBUG 2015-04-15 11:52:27,195: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:52:27,195: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:52:27,702: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39739
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:28,211: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39738
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:28,211: 	 Proxy valid for 11:02:19 hours
+DEBUG 2015-04-15 11:52:28,318: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:52:28,319: 	 Checking credentials
+DEBUG 2015-04-15 11:52:28,319: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:52:28,319: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:52:28,823: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39738
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:29,333: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39737
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:29,333: 	 Proxy valid for 11:02:18 hours
+DEBUG 2015-04-15 11:52:29,839: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:29,839: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:52:29,840: 	 Options use: ['--site=T1_CH_CERN']
+DEBUG 2015-04-15 11:52:29,840: 	 Instance is None
+DEBUG 2015-04-15 11:52:29,840: 	 Server base url is None
+DEBUG 2015-04-15 11:52:29,862: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_4Tswue/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_4Tswue/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_4Tswue/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x13055a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x15bcc10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x1307910>}, 'logger': <logging.Logger object at 0x15bcc10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_4Tswue/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:52:29,862: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:52:29,862: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:52:31,278: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:52:31,278: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:52:33,600: 	 Username is: shtan
+INFO 2015-04-15 11:52:33,601: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:52:33,601: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:52:33,618: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:52:33,619: 	 Will check write permission in /store/user/shtan on site T1_CH_CERN
+DEBUG 2015-04-15 11:52:33,620: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T1_CH_CERN'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:52:34,120: 	 The cachefile /tmp/shtan/.wmcore_cache_4Tswue/cmsweb.cern.ch/-6839795942940155062_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T1_CH_CERN '.\n
+
+INFO 2015-04-15 11:52:34,121: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:52:34,121: 	 Result: no nodes found for ' T1_CH_CERN '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T1_CH_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:52:34,121: 	 Error contacting the server.
+DEBUG 2015-04-15 11:52:34,121: 	 ERROR: Bad Request (400):  'no nodes found for ' T1_CH_CERN '.\n'
+DEBUG 2015-04-15 11:52:34,121: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T1_CH_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:52:34,121: 	      Input data: 
+DEBUG 2015-04-15 11:52:34,121: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 10:07:34 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:52:34 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=31838 t=1429091554085935'}
+ERROR 2015-04-15 11:52:34,121: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:52:39,038: 	 Executing command: 'checkwrite'
+DEBUG 2015-04-15 11:52:39,038: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:52:39,045: 	 Checking credentials
+DEBUG 2015-04-15 11:52:39,045: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:52:39,045: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:52:39,549: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39727
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:40,055: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39727
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:40,055: 	 Proxy valid for 11:02:07 hours
+DEBUG 2015-04-15 11:52:40,167: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+
+ error: WARNING: can't open config file: /build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/tmp/BUILDROOT/779a792f862039a4ebba572299ebbb36/build/dmwmbld/srv/state/dmwmbld/builds/comp_gcc481/w/slc6_amd64_gcc481/external/openssl/1.0.1m-comp/ssl/openssl.cnf
+
+ retcode : 0
+DEBUG 2015-04-15 11:52:40,167: 	 Checking credentials
+DEBUG 2015-04-15 11:52:40,167: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-15 11:52:40,167: 	 Getting proxy life time left
+DEBUG 2015-04-15 11:52:40,779: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 39726
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:41,285: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 39725
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:41,285: 	 Proxy valid for 11:02:06 hours
+DEBUG 2015-04-15 11:52:41,790: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u56609 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+/cms/uscms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-15 11:52:41,790: 	 Command use: checkwrite
+DEBUG 2015-04-15 11:52:41,790: 	 Options use: ['--site=T0_CH_CERN']
+DEBUG 2015-04-15 11:52:41,790: 	 Instance is None
+DEBUG 2015-04-15 11:52:41,791: 	 Server base url is None
+DEBUG 2015-04-15 11:52:41,793: 	 Service initialised ({'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'maxcachereuse': 24.0, 'cachepath': '/tmp/shtan/.wmcore_cache_zlkcXn/cmsweb.cern.ch', 'inputdata': {}, 'cert': '/tmp/x509up_u56609', 'timeout': 300, 'service_name': 'PhEDEx', 'requests': {'endpoint': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'key': '/tmp/x509up_u56609', 'req_cache_path': '/tmp/shtan/.wmcore_cache_zlkcXn/cmsweb.cern.ch/.cache', 'cachepath': '/tmp/shtan/.wmcore_cache_zlkcXn/cmsweb.cern.ch', 'host': 'https://cmsweb.cern.ch/phedex/datasvc/json/prod/', 'cacheduration': 0, 'cert': '/tmp/x509up_u56609', 'accept_type': 'text/html', 'timeout': 300, 'deleteCacheOnExit': <WMCore.Services.Requests.TempDirectory instance at 0x177a5a8>, 'endpoint_components': ParseResult(scheme='https', netloc='cmsweb.cern.ch', path='/phedex/datasvc/json/prod/', params='', query='', fragment=''), 'logger': <logging.Logger object at 0x1a32c10>, 'content_type': 'application/x-www-form-urlencoded', 'conn': <httplib2.Http object at 0x177c910>}, 'logger': <logging.Logger object at 0x1a32c10>, 'cacheduration': 0, 'method': None}):
+	 host: cmsweb.cern.ch, basepath: https://cmsweb.cern.ch/phedex/datasvc/json/prod/ (text/html)
+	 cache: /tmp/shtan/.wmcore_cache_zlkcXn/cmsweb.cern.ch (duration 0 hours, max reuse 24.0 hours)
+INFO 2015-04-15 11:52:41,793: 	 Will check write permission in the default location /store/user/<username>
+INFO 2015-04-15 11:52:41,793: 	 Retrieving DN from proxy...
+INFO 2015-04-15 11:52:42,991: 	 DN is: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=shtan/CN=751782/CN=Shao Min Tan
+INFO 2015-04-15 11:52:42,991: 	 Retrieving username from SiteDB...
+INFO 2015-04-15 11:52:45,390: 	 Username is: shtan
+INFO 2015-04-15 11:52:45,390: 	 Validating LFN /store/user/shtan...
+INFO 2015-04-15 11:52:45,390: 	 LFN /store/user/shtan is valid.
+INFO 2015-04-15 11:52:45,402: 	 Will use `gfal-copy`, `gfal-rm` commands for checking write permissions
+INFO 2015-04-15 11:52:45,403: 	 Will check write permission in /store/user/shtan on site T0_CH_CERN
+DEBUG 2015-04-15 11:52:45,405: 	 getData: 
+	url: lfn2pfn
+	data: {'node': ['T0_CH_CERN'], 'custodial': 'n', 'lfn': ['/store/user/shtan/crab3checkwrite.0.tmp'], 'protocol': 'srmv2'}
+WARNING 2015-04-15 11:52:45,777: 	 The cachefile /tmp/shtan/.wmcore_cache_zlkcXn/cmsweb.cern.ch/4626799640528902843_GET_lfn2pfn does not exist and the service at https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn is unavailable - it returned 400 because Bad Request
+ with result: no nodes found for ' T0_CH_CERN '.\n
+
+INFO 2015-04-15 11:52:45,778: 	 Error: Failed to contact PhEDEx or wrong PhEDEx node name is used
+INFO 2015-04-15 11:52:45,778: 	 Result: no nodes found for ' T0_CH_CERN '.\n
+Status :400
+URL :https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T0_CH_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+INFO 2015-04-15 11:52:45,778: 	 Error contacting the server.
+DEBUG 2015-04-15 11:52:45,778: 	 ERROR: Bad Request (400):  'no nodes found for ' T0_CH_CERN '.\n'
+DEBUG 2015-04-15 11:52:45,778: 	 Command failed with URI: https://cmsweb.cern.ch/phedex/datasvc/json/prod/lfn2pfn?node=T0_CH_CERN&custodial=n&lfn=%2Fstore%2Fuser%2Fshtan%2Fcrab3checkwrite.0.tmp&protocol=srmv2
+DEBUG 2015-04-15 11:52:45,778: 	      Input data: 
+DEBUG 2015-04-15 11:52:45,778: 	      Request headers: {'status': '400', 'content-length': '36', 'expires': 'Wed, 15 Apr 2015 10:07:45 GMT', 'server': 'Apache', 'connection': 'close', 'x-pad': 'avoid browser bug', 'cache-control': 'public, must-revalidate, max-age=900', 'date': 'Wed, 15 Apr 2015 09:52:45 GMT', 'content-type': 'text/html; charset=iso-8859-1', 'cms-server-time': 'D=19569 t=1429091565755708'}
+ERROR 2015-04-15 11:52:45,778: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 168, in __call__
+    self.cmd()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 80, in __call__
+    pfn = self.getPFN()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/checkwrite.py", line 165, in getPFN
+    raise HTTPException, errormsg
+HTTPException
+DEBUG 2015-04-15 11:55:08,837: 	 Executing command: 'status'
+DEBUG 2015-04-15 11:55:08,838: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-15 11:55:23,632: 	 Executing command: 'status'
+DEBUG 2015-04-15 11:55:23,632: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-16 12:01:25,431: 	 Executing command: 'submit'
+DEBUG 2015-04-16 12:01:25,431: 	 Found /afs/cern.ch/user/s/shtan/.crab3 file
+DEBUG 2015-04-16 12:01:25,446: 	 Checking credentials
+DEBUG 2015-04-16 12:01:25,447: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-04-16 12:01:25,447: 	 Getting proxy life time left
+DEBUG 2015-04-16 12:01:25,953: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 40493
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-16 12:01:26,561: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 40492
+
+ error: 
+ retcode : 0
+DEBUG 2015-04-16 12:01:26,561: 	 Proxy valid for 11:14:53 hours
+INFO 2015-04-16 12:01:26,561: 	 Will use configuration file crabtest.py.
+DEBUG 2015-04-16 12:01:26,561: 	 Loading configuration
+DEBUG 2015-04-16 12:01:26,562: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+ERROR 2015-04-16 12:01:26,563: 	 Working area '/afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet5' already exists 
+Please change the requestName in the config file
+ERROR 2015-04-16 12:01:26,563: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 181, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/bin/crab", line 166, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 39, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 268, in __init__
+    getattr(self.configuration.General, 'requestName', None))
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.15-comp/lib/python2.6/site-packages/CRABClient/ClientUtilities.py", line 335, in createWorkArea
+    raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
+ConfigException: Working area '/afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet5' already exists 
+Please change the requestName in the config file

@@ -4,7 +4,7 @@ process = cms.Process("Demo")
 
 process.load("FWCore.MessageService.MessageLogger_cfi")
 process.load("METSigTuning.MakeNtuple.makentuple_cfi")
-process.load("RecoMET/METProducers.METSignificanceObjects_cfi")
+#process.load("RecoMET/METProducers.METSignificanceObjects_cfi")
 
 process.maxEvents = cms.untracked.PSet( input = cms.untracked.int32(100) )
 process.MessageLogger.cerr.FwkReport.reportEvery = 1000
@@ -21,8 +21,9 @@ process.source = cms.Source("PoolSource",
        #"/store/mc/Phys14DR/DYJetsToLL_M-50_13TeV-madgraph-pythia8/AODSIM/PU20bx25_PHYS14_25_V1-v1/00000/0CF38497-006C-E411-A713-0025907DCA0C.root",
        #"/store/mc/Phys14DR/DYJetsToLL_M-50_13TeV-madgraph-pythia8/AODSIM/PU20bx25_PHYS14_25_V1-v1/00000/0E2BE86D-1E6C-E411-9FD4-003048D4DEAE.root",
        #"/store/mc/Phys14DR/DYJetsToLL_M-50_13TeV-madgraph-pythia8/AODSIM/PU20bx25_PHYS14_25_V1-v1/00000/0E50D3F3-056C-E411-8DF6-0025907DCA7E.root"
-       '/store/relval/CMSSW_7_3_0/RelValZMM_13/MINIAODSIM/MCRUN2_73_V7-v1/00000/127CA68E-8981-E411-A524-002590593872.root',
-       '/store/relval/CMSSW_7_3_0/RelValZMM_13/MINIAODSIM/MCRUN2_73_V7-v1/00000/56FE228D-8981-E411-9AD8-0025905A6126.root'
+       #'/store/relval/CMSSW_7_3_0/RelValZMM_13/MINIAODSIM/MCRUN2_73_V7-v1/00000/127CA68E-8981-E411-A524-002590593872.root',
+       #'/store/relval/CMSSW_7_3_0/RelValZMM_13/MINIAODSIM/MCRUN2_73_V7-v1/00000/56FE228D-8981-E411-9AD8-0025905A6126.root'
+       'file:../../../../../../../../work/s/shtan/private/0432E62A-7A6C-E411-87BB-002590DB92A8.root'
     )
 )
 
@@ -35,6 +36,9 @@ process.demo = cms.EDAnalyzer('MakeNtuple',
       vertices = cms.InputTag("offlineSlimmedPrimaryVertices")
 )
 
+process.options = cms.untracked.PSet(
+      SkipEvent = cms.untracked.vstring('ProductNotFound')
+)
 
 process.p = cms.Path(
       #process.selectionSequenceForMETSig * 
