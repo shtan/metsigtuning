@@ -1703,3 +1703,41 @@ Traceback (most recent call last):
     raise ConfigException("Working area '%s' already exists \nPlease change the requestName in the config file" % fullpath)
 ConfigException: Working area '/afs/cern.ch/user/s/shtan/jetmet/CMSSW_7_3_0_pre1/src/METSigTuning/MakeNtuple/crab_projects/crab_crabtestjetmet5' already exists 
 Please change the requestName in the config file
+DEBUG 2015-06-19 10:08:33,353: 	 Executing command: 'submit'
+DEBUG 2015-06-19 10:08:33,354: 	 Found CRAB cache file /afs/cern.ch/user/s/shtan/.crab3
+DEBUG 2015-06-19 10:08:33,399: 	 Checking credentials
+DEBUG 2015-06-19 10:08:33,400: 	 Found proxy file /tmp/x509up_u56609
+DEBUG 2015-06-19 10:08:33,400: 	 Getting proxy life time left
+DEBUG 2015-06-19 10:08:34,611: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -timeleft
+ output : 38988
+
+ error: 
+ retcode : 0
+DEBUG 2015-06-19 10:08:35,115: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u56609 -actimeleft
+ output : 38986
+
+ error: 
+ retcode : 0
+DEBUG 2015-06-19 10:08:35,115: 	 Proxy valid for 10:49:48 hours
+INFO 2015-06-19 10:08:35,115: 	 Will use CRAB configuration file crabtest.py
+DEBUG 2015-06-19 10:08:35,115: 	 Loading CRAB configuration file.
+ERROR 2015-06-19 10:08:35,173: 	 Invalid CRAB configuration: Parameter Data.outLFN has been renamed to Data.outLFNDirBase starting from CRAB v3.3.16; please change your configuration file accordingly.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+ERROR 2015-06-19 10:08:35,174: 	 Caught exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506/bin/crab", line 136, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506/bin/crab", line 122, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506/lib/python2.6/site-packages/CRABClient/Commands/submit.py", line 40, in __init__
+    SubCommand.__init__(self, logger, cmdargs, disable_interspersed_args = True)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 294, in __init__
+    self.loadConfig(self.options.config, self.args)
+  File "/cvmfs/cms.cern.ch/crab3/slc6_amd64_gcc481/cms/crabclient/3.3.1506/lib/python2.6/site-packages/CRABClient/Commands/SubCommand.py", line 88, in loadConfig
+    raise ConfigurationException(configmsg)
+ConfigurationException: Invalid CRAB configuration: Parameter Data.outLFN has been renamed to Data.outLFNDirBase starting from CRAB v3.3.16; please change your configuration file accordingly.
+The documentation about the CRAB configuration file can be found in https://twiki.cern.ch/twiki/bin/view/CMSPublic/CRAB3ConfigurationFile
+DEBUG 2015-06-19 10:21:42,405: 	 Executing command: 'status'
+DEBUG 2015-06-19 10:21:42,405: 	 Found CRAB cache file /afs/cern.ch/user/s/shtan/.crab3
