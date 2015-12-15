@@ -204,13 +204,16 @@ void Plotter::Analyse(vector<event>& eventref_temp){
             }//end numconst loop
 
             for( int ineutralChargedRatio=0; ineutralChargedRatio<(int)( array_size(neutralChargedRatioBins) - 1); ineutralChargedRatio++){
+
                 double chargedEmEnergy = ev->jet_chargedEmEnergy.at(ev->matchedijets.at(i));
                 double chargedHadronEnergy = ev->jet_chargedHadronEnergy.at(ev->matchedijets.at(i));
                 double neutralEmEnergy = ev->jet_neutralEmEnergy.at(ev->matchedijets.at(i));
                 double neutralHadronEnergy = ev->jet_neutralHadronEnergy.at(ev->matchedijets.at(i));
                 double neutralChargedRatio = (neutralEmEnergy + neutralHadronEnergy)/(chargedEmEnergy + chargedHadronEnergy);
                 if( neutralChargedRatio >= neutralChargedRatioBins[ineutralChargedRatio] and neutralChargedRatio < neutralChargedRatioBins[ineutralChargedRatio+1] ){
-                    
+
+                    if (ev->jet_eta.at(ev->matchedijets.at(i)) > 2.5 ) continue;
+
                     histss_["res_neutralChargedRatio_index" + num2string( (double)(ineutralChargedRatio) ) +"_" + num2string( (double)(neutralChargedRatioBins[ineutralChargedRatio]) ) + "to" + num2string( (double)(neutralChargedRatioBins[ineutralChargedRatio + 1])) ]  -> Fill(ptratio);
                     std::cout<<"neutralcharged"<<std::endl;
                 }
@@ -226,6 +229,18 @@ void Plotter::Analyse(vector<event>& eventref_temp){
                 if( hadronicEmRatio >= hadronicEmRatioBins[ihadronicEmRatio] and hadronicEmRatio < hadronicEmRatioBins[ihadronicEmRatio+1] ){
                     
                     histss_["res_hadronicEmRatio_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio]) ) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ] -> Fill(ptratio);
+
+                    if (ev->jet_eta.at(ev->matchedijets.at(i)) <= 2.5){
+                         histss_["res_hadronicEmRatio_etalt2.5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio]) ) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ] -> Fill(ptratio);
+                    }
+
+                    if (ev->jet_eta.at(ev->matchedijets.at(i)) >= 2.5){
+                         histss_["res_hadronicEmRatio_etagt3.5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio]) ) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ] -> Fill(ptratio);
+                    }
+
+
+
+
                     std::cout<<"hadronicem"<<std::endl;
                 }
                 std::cout<<"outloop"<<std::endl;
@@ -390,6 +405,10 @@ void Plotter::DeclareHists(){
     std::cout<<"hehe"<<std::endl;
      for( int ihadronicEmRatio=0; ihadronicEmRatio<(int)( array_size(hadronicEmRatioBins) - 1); ihadronicEmRatio++){
         string histName = "res_hadronicEmRatio_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio])) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ;
+
+        string histName = "res_hadronicEmRatio_etalt2.5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio])) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ;
+
+        string histName = "res_hadronicEmRatio_etagt3.5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio])) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ;
 
         histss_[histName] = new TH1D(histName.c_str(), histName.c_str(), 50, 0, 2);
      }//end hadronicEmRatio loop
