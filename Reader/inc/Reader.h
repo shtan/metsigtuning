@@ -48,6 +48,7 @@ struct event {
    vector<double> jet_phi;
    vector<double> jet_eta;
    vector<double> jet_pt;
+   vector<double> jet_energy;
    vector<double> jet_sigmapt;
    vector<double> jet_sigmaphi;
    vector<int> jet_num_constituents;
@@ -120,6 +121,8 @@ class Plotter{
       int numConstBins[7] = {0,8,12,16,20,30,50};
       double neutralChargedRatioBins[9] = {0,0.5,1,2,4,6,8,10,20};
       double hadronicEmRatioBins[9] = {0,0.5,1,2,4,6,8,10,20};
+      double massBins[10] = {15.,30.,60.,120.,230.,380.,600.,1000.,1800.,3200.};
+ 
 
 };
 #endif

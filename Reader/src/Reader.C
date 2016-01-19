@@ -124,6 +124,7 @@ void Plotter::ReadNtuple(string filename, vector<event>& eventref_temp){
        evtemp.jet_pt = *jet_pt;
        evtemp.jet_phi = *jet_phi;
        evtemp.jet_eta = *jet_eta;
+       evtemp.jet_energy = *jet_energy;
        evtemp.jet_sigmapt = *jet_sigmapt;
        evtemp.jet_sigmaphi = *jet_sigmaphi;
        evtemp.jet_num_constituents = *jet_num_constituents;
@@ -194,6 +195,19 @@ void Plotter::Analyse(vector<event>& eventref_temp){
                 //std::cout<< "j=" << j <<std::endl;
             }//end eta loop
 
+            for( int imass=0; imass<(int)( array_size(massBins) - 1); imass++){
+                TLorentzVector jetlorentz;
+                int matchedi = ev->matchedijets.at(i);
+                jetlorentz.SetPtEtaPhiE(ev->jet_pt.at(matchedi), ev->jet_eta.at(matchedi), ev->jet_phi.at(matchedi), ev->jet_energy.at(matchedi) );
+                double jetmass = jetlorentz.M();
+
+                if( jetmass >= massBins[imass] and jetmass < massBins[imass+1] ){
+                    histss_["res_jetMass_index" + num2string( (double)(imass)) + "_" + num2string( (double)(massBins[imass]) ) + "to" + num2string( (double)(massBins[imass+1]) )] -> Fill( ptratio);
+                    std::cout<<"mass"<<std::endl;
+                }
+            }
+
+
             for( int inumconst=0; inumconst<(int)( array_size(numConstBins) - 1); inumconst++){
                 int numconst = ev->jet_num_constituents.at(ev->matchedijets.at(i));
                 if( numconst >= numConstBins[inumconst] and numconst < numConstBins[inumconst+1] ){
@@ -231,11 +245,11 @@ void Plotter::Analyse(vector<event>& eventref_temp){
                     histss_["res_hadronicEmRatio_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio]) ) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ] -> Fill(ptratio);
 
                     if (ev->jet_eta.at(ev->matchedijets.at(i)) <= 2.5){
-                         histss_["res_hadronicEmRatio_etalt2.5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio]) ) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ] -> Fill(ptratio);
+                         histss_["res_hadronicEmRatio_etalt2p5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio]) ) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ] -> Fill(ptratio);
                     }
 
                     if (ev->jet_eta.at(ev->matchedijets.at(i)) >= 2.5){
-                         histss_["res_hadronicEmRatio_etagt3.5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio]) ) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ] -> Fill(ptratio);
+                         histss_["res_hadronicEmRatio_etagt3p5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio]) ) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ] -> Fill(ptratio);
                     }
 
 
@@ -266,38 +280,72 @@ void Plotter::Analyse(vector<event>& eventref_temp){
     }
 
     std::vector<int> colourArray = {1,4,9,6,2,5,3,7,8};
-    std::vector<double> maxRangeHadronicEmRatioArray, maxRangeNeutralChargedRatioArray;
+    std::vector<double> maxRangeHadronicEmRatioArray, maxRangeNeutralChargedRatioArray, maxRangeHadronicEmRatio2p5Array, maxRangeHadronicEmRatio3p5Array, maxRangeJetMassArray;
     for( tmap::iterator h = histss_.begin(); h != histss_.end(); h++){
     //for( int iRange=0; iRange<(int)(hadronicEmRatioBins.size()); iRange++){
-        std::size_t foundHadronicEmRatio = (h->first).find("hadronicEmRatio");
+        std::size_t foundHadronicEmRatio = (h->first).find("hadronicEmRatio_index");
         if( foundHadronicEmRatio != string::npos ){
+            h->second->Scale(10000/h->second->Integral());
+        }
+        std::size_t foundHadronicEmRatio2p5 = (h->first).find("hadronicEmRatio_etalt2p5");
+        if( foundHadronicEmRatio2p5 != string::npos ){
+            h->second->Scale(10000/h->second->Integral());
+        }
+        std::size_t foundHadronicEmRatio3p5 = (h->first).find("hadronicEmRatio_etagt3p5");
+        if( foundHadronicEmRatio3p5 != string::npos ){
             h->second->Scale(10000/h->second->Integral());
         }
         std::size_t foundNeutralChargedRatio = (h->first).find("neutralChargedRatio");
         if( foundNeutralChargedRatio != string::npos){
             h->second->Scale(10000/h->second->Integral());
         }
+        std::size_t foundJetMass = (h->first).find("jetMass");
+        if( foundJetMass != string::npos){
+            h->second->Scale(10000/h->second->Integral());
+        }
     }
     for( tmap::iterator h = histss_.begin(); h != histss_.end(); h++){
     //for( int iRange=0; iRange<(int)(hadronicEmRatioBins.size()); iRange++){
-        std::size_t foundHadronicEmRatio = (h->first).find("hadronicEmRatio");
+        std::size_t foundHadronicEmRatio = (h->first).find("hadronicEmRatio_index");
         if( foundHadronicEmRatio != string::npos ){
             maxRangeHadronicEmRatioArray.push_back( h->second->GetMaximum() );
+        }
+        std::size_t foundHadronicEmRatio2p5 = (h->first).find("hadronicEmRatio_etalt2p5");
+        if( foundHadronicEmRatio2p5 != string::npos ){
+            maxRangeHadronicEmRatio2p5Array.push_back( h->second->GetMaximum() );
+        }
+        std::size_t foundHadronicEmRatio3p5 = (h->first).find("hadronicEmRatio_etagt3p5");
+        if( foundHadronicEmRatio3p5 != string::npos ){
+            maxRangeHadronicEmRatio3p5Array.push_back( h->second->GetMaximum() );
         }
         std::size_t foundNeutralChargedRatio = (h->first).find("neutralChargedRatio");
         if( foundNeutralChargedRatio != string::npos){
             maxRangeNeutralChargedRatioArray.push_back( h->second->GetMaximum() );
         }
+        std::size_t foundJetMass = (h->first).find("jetMass");
+        if( foundJetMass != string::npos){
+            maxRangeJetMassArray.push_back( h->second->GetMaximum() );
+        }
     }
     auto maxRangeHadronicEmRatioIt = std::max_element(std::begin(maxRangeHadronicEmRatioArray), std::end(maxRangeHadronicEmRatioArray));
     double maxRangeHadronicEmRatio = *maxRangeHadronicEmRatioIt;
+    auto maxRangeHadronicEmRatio2p5It = std::max_element(std::begin(maxRangeHadronicEmRatio2p5Array), std::end(maxRangeHadronicEmRatio2p5Array));
+    double maxRangeHadronicEmRatio2p5 = *maxRangeHadronicEmRatio2p5It;
+    auto maxRangeHadronicEmRatio3p5It = std::max_element(std::begin(maxRangeHadronicEmRatio3p5Array), std::end(maxRangeHadronicEmRatio3p5Array));
+    double maxRangeHadronicEmRatio3p5 = *maxRangeHadronicEmRatio3p5It;
     std::cout<<"LALALA"<<std::endl;
     auto maxRangeNeutralChargedRatioIt = std::max_element(std::begin(maxRangeNeutralChargedRatioArray), std::end(maxRangeNeutralChargedRatioArray));
     std::cout<<"0"<<std::endl;
     double maxRangeNeutralChargedRatio = *maxRangeNeutralChargedRatioIt;
+    auto maxRangeJetMassIt = std::max_element(std::begin(maxRangeJetMassArray), std::end(maxRangeJetMassArray));
+    std::cout<<"0"<<std::endl;
+    double maxRangeJetMass = *maxRangeJetMassIt;
     std::cout<<"1"<<std::endl;
     TCanvas *chadronicEmRatio = new TCanvas("chadronicEmRatio","chadronicEmRatio",700,700);
+    TCanvas *chadronicEmRatio2p5 = new TCanvas("chadronicEmRatio2p5","chadronicEmRatio2p5",700,700);
+    TCanvas *chadronicEmRatio3p5 = new TCanvas("chadronicEmRatio3p5","chadronicEmRatio3p5",700,700);
     TCanvas *cneutralChargedRatio = new TCanvas("cneutralChargedRatio","cneutralChargedRatio",700,700);
+    TCanvas *cjetMass = new TCanvas("cjetMass","cjetMass",700,700);
     chadronicEmRatio->cd();
 
     std::cout<<"2"<<std::endl;
@@ -305,7 +353,7 @@ void Plotter::Analyse(vector<event>& eventref_temp){
     for(tmap::iterator h = histss_.begin(); h != histss_.end(); h++){
         std::cout<<"3"<<std::endl;
         h->second->Write();
-        std::size_t foundHadronicEmRatio = (h->first).find("hadronicEmRatio");
+        std::size_t foundHadronicEmRatio = (h->first).find("hadronicEmRatio_index");
         if( foundHadronicEmRatio != string::npos ){
             //chadronicEmRatio->cd();
             std::cout<<"4"<<std::endl;
@@ -326,6 +374,65 @@ void Plotter::Analyse(vector<event>& eventref_temp){
     std::cout<<"HAHAHA"<<std::endl;
     chadronicEmRatio->Write();
     chadronicEmRatio->ls();
+
+    chadronicEmRatio2p5->cd();
+
+    std::cout<<"2"<<std::endl;
+    colourRotate = 0;
+    for(tmap::iterator h = histss_.begin(); h != histss_.end(); h++){
+        std::cout<<"3"<<std::endl;
+        //h->second->Write();
+        std::size_t foundHadronicEmRatio2p5 = (h->first).find("hadronicEmRatio_etalt2p5");
+        if( foundHadronicEmRatio2p5 != string::npos ){
+            //chadronicEmRatio->cd();
+            std::cout<<"4"<<std::endl;
+            h->second->SetLineColor(colourArray.at(colourRotate % (int)(colourArray.size())));
+            if( colourRotate==0){
+                //h->second->SetMaximum(maxRangeHadronicEmRatio + 100);
+                //h->second->Scale(1000/h->second->Integral());
+                h->second->SetMaximum(maxRangeHadronicEmRatio2p5 + 100);
+                h->second->DrawCopy();
+            } else {
+                //h->second->Scale(1000/h->second->Integral());
+                h->second->DrawCopy("same");
+            }
+            colourRotate++;
+            //chadronicEmRatio->ls();
+        }
+    }
+    std::cout<<"HAHAHA"<<std::endl;
+    chadronicEmRatio2p5->Write();
+    chadronicEmRatio2p5->ls();
+
+    chadronicEmRatio3p5->cd();
+
+    std::cout<<"2"<<std::endl;
+    colourRotate = 0;
+    for(tmap::iterator h = histss_.begin(); h != histss_.end(); h++){
+        std::cout<<"3"<<std::endl;
+        //h->second->Write();
+        std::size_t foundHadronicEmRatio3p5 = (h->first).find("hadronicEmRatio_etagt3p5");
+        if( foundHadronicEmRatio3p5 != string::npos ){
+            //chadronicEmRatio->cd();
+            std::cout<<"4"<<std::endl;
+            h->second->SetLineColor(colourArray.at(colourRotate % (int)(colourArray.size())));
+            if( colourRotate==0){
+                //h->second->SetMaximum(maxRangeHadronicEmRatio + 100);
+                //h->second->Scale(1000/h->second->Integral());
+                h->second->SetMaximum(maxRangeHadronicEmRatio3p5 + 100);
+                h->second->DrawCopy();
+            } else {
+                //h->second->Scale(1000/h->second->Integral());
+                h->second->DrawCopy("same");
+            }
+            colourRotate++;
+            //chadronicEmRatio->ls();
+        }
+    }
+    std::cout<<"HAHAHA"<<std::endl;
+    chadronicEmRatio3p5->Write();
+    chadronicEmRatio3p5->ls();
+
     cneutralChargedRatio->cd();
 
     colourRotate = 0;
@@ -356,24 +463,56 @@ void Plotter::Analyse(vector<event>& eventref_temp){
     //chadronicEmRatio->ls();
     cneutralChargedRatio->ls();
     //hists_["all"]["all"] -> Write();
+
+    cjetMass->cd();
+
+    colourRotate = 0;
+    for(tmap::iterator h = histss_.begin(); h != histss_.end(); h++){
+
+        std::size_t foundJetMass = (h->first).find("jetMass");
+        if( foundJetMass != string::npos ){
+            //cneutralChargedRatio->cd();
+            h->second->SetLineColor(colourArray.at(colourRotate % (int)(colourArray.size())));
+            if( colourRotate==0){
+                //h->second->SetMaximum(maxRangeNeutralChargedRatio + 100);
+                //h->second->Scale(1000/h->second->Integral());
+                h->second->SetMaximum(maxRangeJetMass + 100);
+                h->second->DrawCopy();
+            } else {
+                //h->second->Scale(1000/h->second->Integral());
+                h->second->DrawCopy("same");
+            }
+            colourRotate++;
+            //cneutralChargedRatio->ls();
+        }
+            
+
+    }
+    std::cout<<"GAGAGA"<<std::endl;
+    //chadronicEmRatio->Write();
+    cjetMass->Write();
+    //chadronicEmRatio->ls();
+    cjetMass->ls();
+ 
+    
     outfile->Write();
     outfile-> Close();
 
     for(tmap::iterator h = histss_.begin(); h != histss_.end(); h++){
-        std::size_t foundHadronicEmRatio = (h->first).find("hadronicEmRatio");
-        if( foundHadronicEmRatio != string::npos ){
+        //std::size_t foundHadronicEmRatio = (h->first).find("hadronicEmRatio");
+        //if( foundHadronicEmRatio != string::npos ){
             double mean = h->second->GetMean(1);
             double rms = h->second->GetRMS();
             std::cout << h->first << ": Mean = " << mean << "; RMS = " << rms << std::endl;
-        }
-            
+        //}
+ /*           
         std::size_t foundNeutralChargedRatio = (h->first).find("neutralChargedRatio");
         if( foundNeutralChargedRatio != string::npos ){
             double mean = h->second->GetMean(1);
             double rms = h->second->GetRMS();
             std::cout << h->first << ": Mean = " << mean << "; RMS = " << rms << std::endl;
         }
-            
+ */           
 
     }
 
@@ -390,6 +529,13 @@ void Plotter::DeclareHists(){
 
         }
     }
+
+    for( int imass=0; imass<(int)( array_size(massBins) - 1); imass++){
+            
+        string histName = "res_jetMass_index" + num2string((double)(imass)) + "_" + num2string( (double)(massBins[imass])) + "to" + num2string( (double)(massBins[imass+1] )) ;
+        histss_[histName] = new TH1D(histName.c_str(), histName.c_str(), 50, 0, 2);
+    }
+
     for( int inumconst=0; inumconst<(int)( array_size(numConstBins) - 1); inumconst++){
             
         string histName = "res_numConstituents_index" + num2string((double)(inumconst)) + "_" + num2string( (double)(numConstBins[inumconst])) + "to" + num2string( (double)(numConstBins[inumconst+1] )) ;
@@ -406,11 +552,13 @@ void Plotter::DeclareHists(){
      for( int ihadronicEmRatio=0; ihadronicEmRatio<(int)( array_size(hadronicEmRatioBins) - 1); ihadronicEmRatio++){
         string histName = "res_hadronicEmRatio_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio])) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ;
 
-        string histName = "res_hadronicEmRatio_etalt2.5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio])) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ;
+        string histName2 = "res_hadronicEmRatio_etalt2p5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio])) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ;
 
-        string histName = "res_hadronicEmRatio_etagt3.5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio])) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ;
+        string histName3 = "res_hadronicEmRatio_etagt3p5_index" + num2string((double)(ihadronicEmRatio)) +"_" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio])) + "to" + num2string( (double)(hadronicEmRatioBins[ihadronicEmRatio+1]) ) ;
 
         histss_[histName] = new TH1D(histName.c_str(), histName.c_str(), 50, 0, 2);
+        histss_[histName2] = new TH1D(histName2.c_str(), histName2.c_str(), 50, 0, 2);
+        histss_[histName3] = new TH1D(histName3.c_str(), histName3.c_str(), 50, 0, 2);
      }//end hadronicEmRatio loop
 
      std::cout<<"hihi"<<std::endl;

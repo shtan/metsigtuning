@@ -24,8 +24,9 @@ int main(){
 
    //fitter.ReadNtuple( "ntuple_DYminiaod_PU20bx25_20150206.root", eventvec );
    //fitter.ReadNtuple( "ntuple_DYminiaod_PU4bx50_20150223.root", eventvec );
-   plotter.ReadNtuple( "../MakeNtuple/ntuples/ntuple_oct20.root", eventvec );
+   //plotter.ReadNtuple( "../MakeNtuple/ntuples/ntuple_oct20.root", eventvec );
    //plotter.ReadNtuple( "../MakeNtuple/ntuple.root", eventvec );
+   plotter.ReadNtuple( "../MakeNtuple/ntuples/ntuple_dec16_combined.root", eventvec );
 
 
    //double x [] = {1.15,1.08,1.04,1.13,1.56,0.0,0.55}; // 2012 data
