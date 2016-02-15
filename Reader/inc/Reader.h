@@ -100,6 +100,7 @@ class Plotter{
       void Matcher( event& );
       void Analyse(vector<event>&);
       void DeclareHists();
+      void PlotOneHist( map< string, TH1D* >&, string);
       string num2string( float );
 
       ROOT::Minuit2::Minuit2Minimizer* gMinuit;
@@ -122,6 +123,8 @@ class Plotter{
       double neutralChargedRatioBins[9] = {0,0.5,1,2,4,6,8,10,20};
       double hadronicEmRatioBins[9] = {0,0.5,1,2,4,6,8,10,20};
       double massBins[10] = {15.,30.,60.,120.,230.,380.,600.,1000.,1800.,3200.};
+
+      std::vector<int> colourArray = {1,4,9,6,2,5,3,7,8};
  
 
 };

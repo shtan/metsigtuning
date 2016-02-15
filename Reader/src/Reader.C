@@ -279,6 +279,14 @@ void Plotter::Analyse(vector<event>& eventref_temp){
         //h->second.second -> Write();
     }
 
+    PlotOneHist(histss_, "hadronicEmRatio_index");
+    PlotOneHist(histss_, "hadronicEmRatio_etalt2p5");
+    PlotOneHist(histss_, "hadronicEmRatio_etagt3p5");
+    PlotOneHist(histss_, "neutralChargedRatio");
+    PlotOneHist(histss_, "jetMass");
+            
+            
+/*
     std::vector<int> colourArray = {1,4,9,6,2,5,3,7,8};
     std::vector<double> maxRangeHadronicEmRatioArray, maxRangeNeutralChargedRatioArray, maxRangeHadronicEmRatio2p5Array, maxRangeHadronicEmRatio3p5Array, maxRangeJetMassArray;
     for( tmap::iterator h = histss_.begin(); h != histss_.end(); h++){
@@ -493,7 +501,9 @@ void Plotter::Analyse(vector<event>& eventref_temp){
     cjetMass->Write();
     //chadronicEmRatio->ls();
     cjetMass->ls();
- 
+*/
+
+    
     
     outfile->Write();
     outfile-> Close();
@@ -517,6 +527,50 @@ void Plotter::Analyse(vector<event>& eventref_temp){
     }
 
 
+}
+
+void Plotter::PlotOneHist( map< string, TH1D* >& histmap, string namewanted ){
+    typedef map<string, TH1D*> tmap;
+
+    std::vector<double> maxRangeArray;
+    for (tmap::iterator h = histmap.begin(); h != histmap.end(); h++){
+        TH1D* hist = h->second;
+        string histname = h->first;
+
+        std::size_t foundName = histname.find(namewanted);
+        if( foundName != string::npos ){
+            hist->Scale(10000/hist->Integral());
+            maxRangeArray.push_back( hist->GetMaximum() );
+        }
+    }
+    auto maxRangeIt = std::max_element(std::begin(maxRangeArray), std::end(maxRangeArray));
+    double maxRange = *maxRangeIt;
+
+    TCanvas *cHist = new TCanvas( ("c"+namewanted).c_str(), ("c"+namewanted).c_str(), 700,700);
+    cHist->cd();
+
+    int colourRotate = 0;
+    for (tmap::iterator h = histmap.begin(); h != histmap.end(); h++){
+        TH1D* hist = h->second;
+        string histname = h->first;
+
+        std::size_t foundName = histname.find(namewanted);
+        if( foundName != string::npos ){
+            hist->SetLineColor(colourArray.at(colourRotate % (int)(colourArray.size())));
+            if (colourRotate==0){
+                hist->SetMaximum(maxRange + 100);
+                hist->DrawCopy();
+            } else {
+                hist->DrawCopy("same");
+            }
+            colourRotate++;
+        }
+
+    }
+
+    cHist->Write();
+    cHist->ls();
+    
 }
 
 void Plotter::DeclareHists(){
