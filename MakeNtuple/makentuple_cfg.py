@@ -43,6 +43,8 @@ process.demo = cms.EDAnalyzer('MakeNtuple',
       leptons = cms.VInputTag("slimmedElectrons", "slimmedMuons", "slimmedPhotons"),
       met = cms.InputTag("slimmedMETs"),
       muons = cms.InputTag("slimmedMuons"),
+      electrons = cms.InputTag("slimmedElectrons"),
+      photons = cms.InputTag("slimmedPhotons"),
       vertices = cms.InputTag("offlineSlimmedPrimaryVertices"),
       genjets = cms.InputTag("slimmedGenJets")
 )

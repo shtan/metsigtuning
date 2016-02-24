@@ -79,6 +79,8 @@ class MakeNtuple : public edm::EDAnalyzer {
       std::vector< edm::EDGetTokenT<edm::View<reco::Candidate> > > lepTokens_;
       edm::InputTag metTag_;
       edm::EDGetTokenT<edm::View<reco::Candidate> > muonToken_;
+      edm::EDGetTokenT<edm::View<reco::Candidate> > electronToken_;
+      edm::EDGetTokenT<edm::View<reco::Candidate> > photonToken_;
       edm::InputTag verticesTag_;
 
       //virtual void beginRun(edm::Run const&, edm::EventSetup const&) override;
@@ -96,15 +98,27 @@ class MakeNtuple : public edm::EDAnalyzer {
 
       std::vector<double> lep_pt, lep_energy, lep_phi, lep_eta;
       std::vector<double> muon_pt, muon_energy, muon_phi, muon_eta;
+      std::vector<double> electron_pt, electron_energy, electron_phi, electron_eta;
+      std::vector<double> photon_pt, photon_energy, photon_phi, photon_eta;
       std::vector<double> jet_pt, jet_energy, jet_phi, jet_eta;
       std::vector<double> genjet_pt, genjet_energy, genjet_phi, genjet_eta;
+      std::vector<int> lep_id, muon_id, electron_id, photon_id, jet_id, genjet_id;
       std::vector<double> jet_sigmapt, jet_sigmaphi;
       std::vector<int> jet_num_constituents;
+      std::vector<int> jet_num_daughters;
       std::vector<double> jet_chargedEmEnergy, jet_chargedHadronEnergy, jet_neutralEmEnergy, jet_neutralHadronEnergy;
       std::vector<double> jet_emEnergyInHF, jet_hadEnergyInHF;
       std::vector<bool> jet_isCaloJet, jet_isPFJet, jet_isJPTJet, jet_isBasicJet;
+      std::vector<int> jet_muonMultiplicity, jet_chargedMultiplicity;
+      std::vector<float> jet_chargedHadronEnergyFraction, jet_neutralHadronEnergyFraction, jet_chargedEmEnergyFraction, jet_neutralEmEnergyFraction;
+      std::vector<float> jet_photonEnergy, jet_photonEnergyFraction, jet_electronEnergy, jet_electronEnergyFraction, jet_muonEnergy, jet_muonEnergyFraction, jet_HFHadronEnergy, jet_HFHadronEnergyFraction, jet_HFEMEnergy, jet_HFEMEnergyFraction;
+      std::vector<int> jet_chargedHadronMultiplicity, jet_neutralHadronMultiplicity, jet_photonMultiplicity, jet_electronMultiplicity, jet_HFHadronMultiplicity, jet_HFEMMultiplicity, jet_neutralMultiplicity;
+      std::vector<float> jet_chargedMuEnergy, jet_chargedMuEnergyFraction;
+      std::vector<float> jet_hoEnergy, jet_hoEnergyFraction;
       double met_pt, met_energy, met_phi, met_eta, met_sumpt;
       int nvertices;
+      std::vector< std::vector <double> > jet_constituent_pt, jet_constituent_eta, jet_constituent_phi, jet_constituent_energy;
+      std::vector< std::vector <int> > jet_constituent_id;
 
       double jetThreshold;
 
@@ -135,6 +149,8 @@ MakeNtuple::MakeNtuple(const edm::ParameterSet& iConfig)
    }
    metTag_ = iConfig.getParameter<edm::InputTag>("met");
    muonToken_ = consumes<edm::View<reco::Candidate> >(iConfig.getParameter<edm::InputTag>("muons"));
+   electronToken_ = consumes<edm::View<reco::Candidate> >(iConfig.getParameter<edm::InputTag>("electrons"));
+   photonToken_ = consumes<edm::View<reco::Candidate> >(iConfig.getParameter<edm::InputTag>("photons"));
    verticesTag_ = iConfig.getParameter<edm::InputTag>("vertices");
 
    jetThreshold = 20;
@@ -171,13 +187,26 @@ MakeNtuple::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
    muon_energy.clear();
    muon_phi.clear();
    muon_eta.clear();
+   muon_id.clear();
+   electron_pt.clear();
+   electron_energy.clear();
+   electron_phi.clear();
+   electron_eta.clear();
+   electron_id.clear();
+   photon_pt.clear();
+   photon_energy.clear();
+   photon_phi.clear();
+   photon_eta.clear();
+   photon_id.clear();
    jet_pt.clear();
    jet_energy.clear();
    jet_phi.clear();
    jet_eta.clear();
+   jet_id.clear();
    genjet_pt.clear();
    genjet_energy.clear();
    genjet_phi.clear();
+   genjet_eta.clear();
    genjet_eta.clear();
    jet_sigmapt.clear();
    jet_sigmaphi.clear();
@@ -192,6 +221,12 @@ MakeNtuple::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
    jet_isPFJet.clear();
    jet_isBasicJet.clear();
    jet_isJPTJet.clear();
+
+   jet_constituent_id.clear();
+   jet_constituent_pt.clear();
+   jet_constituent_eta.clear();
+   jet_constituent_phi.clear();
+   jet_constituent_energy.clear();
 
    run = iEvent.id().run();
    event = iEvent.id().event();
@@ -235,7 +270,40 @@ MakeNtuple::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
          muon_energy.push_back( muon->energy() );
          muon_phi.push_back( muon->phi() );
          muon_eta.push_back( muon->eta() );
+         muon_id.push_back( muon->pdgId() );
          nmuons++;
+      }
+   }
+
+   // electrons (for event selection)
+   Handle<reco::CandidateView> electrons;
+   iEvent.getByToken(electronToken_, electrons);
+   double nelectrons = 0;
+   for ( reco::CandidateView::const_iterator electron = electrons->begin();
+         electron != electrons->end(); ++electron ) {
+      if( electron->pt() > 20 and fabs(electron->eta()) < 2.4 ){
+         electron_pt.push_back( electron->pt() );
+         electron_energy.push_back( electron->energy() );
+         electron_phi.push_back( electron->phi() );
+         electron_eta.push_back( electron->eta() );
+         electron_id.push_back( electron->pdgId() );
+         nelectrons++;
+      }
+   }
+
+   // photons (for event selection)
+   Handle<reco::CandidateView> photons;
+   iEvent.getByToken(photonToken_, photons);
+   double nphotons = 0;
+   for ( reco::CandidateView::const_iterator photon = photons->begin();
+         photon != photons->end(); ++photon ) {
+      if( photon->pt() > 20 and fabs(photon->eta()) < 2.4 ){
+         photon_pt.push_back( photon->pt() );
+         photon_energy.push_back( photon->energy() );
+         photon_phi.push_back( photon->phi() );
+         photon_eta.push_back( photon->eta() );
+         photon_id.push_back( photon->pdgId() );
+         nphotons++;
       }
    }
 
@@ -387,24 +455,95 @@ MakeNtuple::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
        jet_energy.push_back( jet->energy() );
        jet_phi.push_back( jet->phi() );
        jet_eta.push_back( jet->eta() );
+       jet_id.push_back( jet->pdgId() );
        jet_num_constituents.push_back( jet->getJetConstituents().size() );
+       jet_num_daughters.push_back( jet->numberOfDaughters() );
        jet_chargedEmEnergy.push_back( jet->chargedEmEnergy() );
        jet_neutralEmEnergy.push_back( jet->neutralEmEnergy() );
        jet_chargedHadronEnergy.push_back( jet->chargedHadronEnergy() );
        jet_neutralHadronEnergy.push_back( jet->neutralHadronEnergy() );
 
-       if ( jet->isCaloJet()){
+/*       if ( jet->isCaloJet()){
             jet_emEnergyInHF.push_back( jet->emEnergyInHF() );
             jet_hadEnergyInHF.push_back( jet->hadEnergyInHF() );
        } else {
             jet_emEnergyInHF.push_back( -99999 );
             jet_hadEnergyInHF.push_back( -99999 );
-        }
+        }*/
        //std::cout<< "bool calojet = " << jet->isCaloJet()<<std::endl;
        jet_isCaloJet.push_back( jet->isCaloJet() );
        jet_isPFJet.push_back( jet->isPFJet() );
        jet_isJPTJet.push_back( jet->isJPTJet() );
        jet_isBasicJet.push_back( jet->isBasicJet() );
+
+       jet_muonMultiplicity.push_back( jet->muonMultiplicity() );
+       jet_chargedMultiplicity.push_back( jet->chargedMultiplicity() );
+       jet_chargedEmEnergy.push_back( jet->chargedEmEnergy() );
+       jet_neutralEmEnergy.push_back( jet->neutralEmEnergy() );
+       jet_chargedHadronEnergy.push_back( jet->chargedHadronEnergy() );
+       jet_neutralHadronEnergy.push_back( jet->neutralHadronEnergy() );
+
+       jet_chargedHadronEnergyFraction.push_back( jet->chargedHadronEnergyFraction() );
+       jet_neutralHadronEnergyFraction.push_back( jet->neutralHadronEnergyFraction() );
+       jet_chargedEmEnergyFraction.push_back( jet->chargedEmEnergyFraction() );
+       jet_neutralEmEnergyFraction.push_back( jet->neutralEmEnergyFraction() );
+
+       jet_photonEnergy.push_back( jet->photonEnergy() );
+       jet_photonEnergyFraction.push_back( jet->photonEnergyFraction() );
+       jet_electronEnergy.push_back( jet->electronEnergy() );
+       jet_electronEnergyFraction.push_back( jet->electronEnergyFraction() );
+       jet_muonEnergy.push_back( jet->muonEnergy() );
+       jet_muonEnergyFraction.push_back( jet->muonEnergyFraction() );
+       jet_HFHadronEnergy.push_back( jet->HFHadronEnergy() );
+       jet_HFHadronEnergyFraction.push_back( jet->HFHadronEnergyFraction() );
+       jet_HFEMEnergy.push_back( jet->HFEMEnergy() );
+       jet_HFEMEnergyFraction.push_back( jet->HFEMEnergyFraction() );
+
+       jet_chargedHadronMultiplicity.push_back( jet->chargedHadronMultiplicity() );
+       jet_neutralHadronMultiplicity.push_back( jet->neutralHadronMultiplicity() );
+       jet_photonMultiplicity.push_back( jet->photonMultiplicity() );
+       jet_electronMultiplicity.push_back( jet->electronMultiplicity() );
+
+       jet_HFHadronMultiplicity.push_back( jet->HFHadronMultiplicity() );
+       jet_HFEMMultiplicity.push_back( jet->HFEMMultiplicity() );
+
+       jet_chargedMuEnergy.push_back( jet->chargedMuEnergy() );
+       jet_chargedMuEnergyFraction.push_back( jet->chargedMuEnergyFraction() );
+
+       jet_neutralMultiplicity.push_back( jet->neutralMultiplicity() );
+
+       jet_hoEnergy.push_back( jet->hoEnergy() );
+       jet_hoEnergyFraction.push_back( jet->hoEnergyFraction() );
+
+       //std::vector<reco::PFCandidatePtr> PFConstituents;
+       //PFConstituents = jet->getPFConstituents;
+       std::vector<double> constituentPt, constituentEta, constituentPhi, constituentEnergy;
+       std::vector<int> constituentId;
+       constituentPt.clear();
+       constituentEta.clear();
+       constituentPhi.clear();
+       constituentEnergy.clear();
+       constituentId.clear();
+
+//       for (int j = 0; j < (int)( (jet->getPFConstituents() ).size()); j++){
+       for (int j = 0; j < (int)(jet->numberOfDaughters()); j++){
+           //reco::PFCandidatePtr PFConstituent;
+           //PFConstituent = (jet->getPFConstituents() ).at(j);
+           //const pat::PackedCandidate &PFConstituent = dynamic_cast<const pat::PackedCandidate &>( *(jet->daughter(j) )); 
+           const reco::Candidate *PFConstituent = jet->daughter(j);
+           constituentPt.push_back( PFConstituent->pt() );
+           constituentEta.push_back( PFConstituent->eta() );
+           constituentPhi.push_back( PFConstituent->phi() );
+           constituentEnergy.push_back( PFConstituent->energy() );
+           constituentId.push_back( PFConstituent->pdgId() );
+       }
+       jet_constituent_pt.push_back( constituentPt );
+       jet_constituent_eta.push_back( constituentEta );
+       jet_constituent_phi.push_back( constituentPhi );
+       jet_constituent_energy.push_back( constituentEnergy );
+       jet_constituent_id.push_back( constituentId );
+
+
 
    }
 
@@ -413,6 +552,7 @@ MakeNtuple::analyze(const edm::Event& iEvent, const edm::EventSetup& iSetup)
        genjet_energy.push_back( genjet->energy() );
        genjet_phi.push_back( genjet->phi() );
        genjet_eta.push_back( genjet->eta() );
+       genjet_id.push_back( genjet->pdgId() );
    }
 
 
@@ -490,6 +630,19 @@ MakeNtuple::beginJob()
    results_tree -> Branch("muon_energy", &muon_energy);
    results_tree -> Branch("muon_phi", &muon_phi);
    results_tree -> Branch("muon_eta", &muon_eta);
+   results_tree -> Branch("muon_id", &muon_id);
+
+   results_tree -> Branch("electron_pt", &electron_pt);
+   results_tree -> Branch("electron_energy", &electron_energy);
+   results_tree -> Branch("electron_phi", &electron_phi);
+   results_tree -> Branch("electron_eta", &electron_eta);
+   results_tree -> Branch("electron_id", &electron_id);
+
+   results_tree -> Branch("photon_pt", &photon_pt);
+   results_tree -> Branch("photon_energy", &photon_energy);
+   results_tree -> Branch("photon_phi", &photon_phi);
+   results_tree -> Branch("photon_eta", &photon_eta);
+   results_tree -> Branch("photon_id", &photon_id);
 
    results_tree -> Branch("lep_pt", &lep_pt);
    results_tree -> Branch("lep_energy", &lep_energy);
@@ -500,6 +653,7 @@ MakeNtuple::beginJob()
    results_tree -> Branch("jet_energy", &jet_energy);
    results_tree -> Branch("jet_phi", &jet_phi);
    results_tree -> Branch("jet_eta", &jet_eta);
+   results_tree -> Branch("jet_id", &jet_id);
    results_tree -> Branch("jet_sigmapt", &jet_sigmapt);
    results_tree -> Branch("jet_sigmaphi", &jet_sigmaphi);
    results_tree -> Branch("jet_num_constituents", &jet_num_constituents);
@@ -519,6 +673,7 @@ MakeNtuple::beginJob()
    results_tree -> Branch("genjet_energy", &genjet_energy);
    results_tree -> Branch("genjet_phi", &genjet_phi);
    results_tree -> Branch("genjet_eta", &genjet_eta);
+   results_tree -> Branch("genjet_id", &genjet_id);
 
    results_tree -> Branch("met_pt", &met_pt);
    results_tree -> Branch("met_energy", &met_energy);
